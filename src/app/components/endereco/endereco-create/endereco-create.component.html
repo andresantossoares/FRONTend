@@ -4,13 +4,7 @@
     </mat-card-header>
     <mat-card-content>
       <form #enderecoForm="ngForm">
-        <!-- Cliente (assuming foreign key to client) -->
-        <mat-form-field appearance="fill">
-          <mat-label>Cliente</mat-label>
-          <input matInput placeholder="ID do Cliente" [(ngModel)]="endereco.clienteId" name="clienteId" type="number" required>
-        </mat-form-field>
-  
-        <!-- Rua -->
+         <!-- Rua -->
         <mat-form-field appearance="fill">
           <mat-label>Rua</mat-label>
           <input matInput placeholder="Rua" [(ngModel)]="endereco.rua" name="rua" required>
@@ -40,8 +34,10 @@
           <input matInput placeholder="CEP" [(ngModel)]="endereco.cep" name="cep" pattern="\d{5}-?\d{3}">
         </mat-form-field>
   
-        <!-- Ativo (boolean flag, common for entities) -->
-        <mat-checkbox [(ngModel)]="endereco.ativo" name="ativo">Ativo?</mat-checkbox>
+        <mat-form-field appearance="fill">
+          <mat-label>Ativo</mat-label>
+          <input matInput placeholder="Ativo" [(ngModel)]="endereco.ativo" name="ativo">
+        </mat-form-field>
       </form>
     </mat-card-content>
     <mat-card-actions>

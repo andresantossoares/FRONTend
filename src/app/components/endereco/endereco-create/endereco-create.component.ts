@@ -12,14 +12,12 @@ import { EnderecoService } from '../endereco.service';
 export class EnderecoCreateComponent implements OnInit {
   endereco: Endereco = {
     id: 0,
-    clienteId: 0, // Assuming FK to client
     rua: '',
     numero: 0,
     cidade: '',
     estado: '',
     cep: '',
-    ativo: true
-    // Add other fields if needed, e.g., fornecedorId if addresses can link to suppliers
+    ativo: ''
   };
 
   constructor(

@@ -39,6 +39,7 @@ import { LivroReadComponent } from './components/livro/livro-read/livro-read.com
 import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
 import { ClienteReadComponent } from './components/cliente/cliente-read/cliente-read.component';
 import { EnderecoCreateComponent } from './components/endereco/endereco-create/endereco-create.component';
+import { ContatoCreateComponent } from './components/contato/contato-create/contato-create.component';
 
 registerLocaleData(localePt)
 
@@ -60,6 +61,7 @@ registerLocaleData(localePt)
     FornecedorReadComponent,
     ClienteReadComponent,
     EnderecoCreateComponent,
+    ContatoCreateComponent,
   ],
   imports: [
     BrowserModule,

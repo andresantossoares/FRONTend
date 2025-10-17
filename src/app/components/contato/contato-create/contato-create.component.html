@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Criar Contato</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form #contatoForm="ngForm">
+        
+        <!-- Celular -->
+        <mat-form-field appearance="fill">
+          <mat-label>Celular</mat-label>
+          <input matInput placeholder="Celular (ex: +5511999999999)" [(ngModel)]="contato.conCelular" name="conCelular" required maxlength="15">
+        </mat-form-field>
+  
+        <!-- Telefone Comercial -->
+        <mat-form-field appearance="fill">
+          <mat-label>Telefone Comercial</mat-label>
+          <input matInput placeholder="Telefone Comercial (ex: +551140000000)" [(ngModel)]="contato.conTelefoneComercial" name="conTelefoneComercial" maxlength="15">
+        </mat-form-field>
+  
+        <!-- Email -->
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email (ex: exemplo@email.com)" [(ngModel)]="contato.conEmail" name="conEmail" type="email" required maxlength="55">
+        </mat-form-field>
+  
+        
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="createContato()" [disabled]="!contatoForm.valid">Criar</button>
+      <button mat-raised-button (click)="cancel()">Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
