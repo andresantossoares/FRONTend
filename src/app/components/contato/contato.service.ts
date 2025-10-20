@@ -23,7 +23,7 @@ export class ContatoService {
   }
 
   // Cria um novo Contato
-  create(contato: Contato): Observable<Contato> {
+  create(contato: Contato): Observable<Contato> {                          
     return this.http.post<Contato>(this.baseUrl, contato);
   }
 

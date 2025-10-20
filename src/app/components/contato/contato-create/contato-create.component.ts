@@ -4,11 +4,11 @@ import { Contato } from '../contato.mode';
 import { ContatoService } from '../contato.service';
 
 @Component({  // <<< ESSENCIAL
-  selector: 'app-forma-pagamento-create',
-  templateUrl: './forma-pagamento-create.component.html',
-  styleUrls: ['./forma-pagamento-create.component.css']
+  selector: 'app-contato-create',
+  templateUrl: './contato-create.component.html',
+  styleUrls: ['./contato-create.component.css']
 })
-export class FormaPagamentoCreateComponent {
+export class ContatoCreateComponent {
 
   contato: Contato = {
     conId: 0,
@@ -25,12 +25,12 @@ export class FormaPagamentoCreateComponent {
   createContato(): void {
     this.contatoService.create(this.contato).subscribe(() => {
       this.contatoService.showMessage('Forma de pagamento criada!');
-      this.router.navigate(['/fpagamentos']);
+      this.router.navigate(['/contato']);
     });
   }
 
   cancel(): void {
-    this.router.navigate(['/fpagamentos']);
+    this.router.navigate(['/contato']);
   }
 
 }
