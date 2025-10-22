@@ -1,12 +1,42 @@
 <mat-card class="cliente-card">
     <mat-card-title>Novo Cliente</mat-card-title>
     <form class="centered-form">
+        <!-- Campos de cliente -->
         <mat-form-field class="full-width-field">
-            <input matInput placeholder="Nome do Cliente" [(ngModel)]="cliente.CliNome" name="CliNome">
+            <input matInput placeholder="Nome do Cliente" [(ngModel)]="cliente.CliNome" name="CliNome" required>
         </mat-form-field>
         <mat-form-field class="full-width-field">
-            <input matInput placeholder="CPF" [(ngModel)]="cliente.CliCpf" name="CliCpf">
+            <input matInput placeholder="CPF" [(ngModel)]="cliente.CliCpf" name="CliCpf" required>
         </mat-form-field>
+
+        <!-- Campos de contato -->
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Celular" [(ngModel)]="cliente.contato.conCelular" name="conCelular" required>
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Telefone Comercial (opcional)" [(ngModel)]="cliente.contato.conTelefoneComercial" name="conTelefoneComercial">
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput type="email" placeholder="Email" [(ngModel)]="cliente.contato.conEmail" name="conEmail" required>
+        </mat-form-field>
+
+        <!-- Novos campos de endereço -->
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Rua" [(ngModel)]="cliente.endereco.endRua" name="endRua" required>
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput type="number" placeholder="Número (opcional)" [(ngModel)]="cliente.endereco.endNumero" name="endNumero">
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Cidade" [(ngModel)]="cliente.endereco.endCidade" name="endCidade" required>
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Estado" [(ngModel)]="cliente.endereco.endEstado" name="endEstado" required>
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="CEP" [(ngModel)]="cliente.endereco.endCep" name="endCep" required>
+        </mat-form-field>
+     
     </form>
 
     <div class="button-container">

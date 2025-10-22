@@ -24,7 +24,7 @@ export class ContatoCreateComponent {
 
   createContato(): void {
     this.contatoService.create(this.contato).subscribe(() => {
-      this.contatoService.showMessage('Forma de pagamento criada!');
+      this.contatoService.showMessage('contato criado!');
       this.router.navigate(['/contato']);
     });
   }

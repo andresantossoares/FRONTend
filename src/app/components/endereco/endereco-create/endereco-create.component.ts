@@ -12,12 +12,11 @@ import { EnderecoService } from '../endereco.service';
 export class EnderecoCreateComponent implements OnInit {
   endereco: Endereco = {
     id: 0,
-    rua: '',
-    numero: 0,
-    cidade: '',
-    estado: '',
-    cep: '',
-    ativo: ''
+    endRua: '',
+    endNumero: 0,
+    endCidade: '',
+    endEstado: '',
+    endCep: '',
   };
 
   constructor(
@@ -30,7 +29,7 @@ export class EnderecoCreateComponent implements OnInit {
   }
 
   createEndereco(): void {
-    if (this.endereco.id === 0 || !this.endereco.rua || !this.endereco.cidade) {
+    if (this.endereco.id === 0 || !this.endereco.endRua || !this.endereco.endCidade) {
       alert('Preencha os campos obrigatórios!'); // Or use MatSnackBar
       return;
     }
@@ -50,3 +49,7 @@ export class EnderecoCreateComponent implements OnInit {
     this.router.navigate(['/enderecos']); // Or wherever you came from
   }
 }
+
+
+
+

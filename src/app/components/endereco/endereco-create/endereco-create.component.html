@@ -7,37 +7,34 @@
          <!-- Rua -->
         <mat-form-field appearance="fill">
           <mat-label>Rua</mat-label>
-          <input matInput placeholder="Rua" [(ngModel)]="endereco.rua" name="rua" required>
+          <input matInput placeholder="Rua" [(ngModel)]="endereco.endRua" name="endRua" required>
         </mat-form-field>
   
         <!-- Número -->
         <mat-form-field appearance="fill">
           <mat-label>Número</mat-label>
-          <input matInput placeholder="Número" [(ngModel)]="endereco.numero" name="numero" type="number">
+          <input matInput placeholder="Número" [(ngModel)]="endereco.endNumero" name="endNumero" type="number">
         </mat-form-field>
   
         <!-- Cidade -->
         <mat-form-field appearance="fill">
           <mat-label>Cidade</mat-label>
-          <input matInput placeholder="Cidade" [(ngModel)]="endereco.cidade" name="cidade" required>
+          <input matInput placeholder="Cidade" [(ngModel)]="endereco.endCidade" name="endCidade" required>
         </mat-form-field>
   
         <!-- Estado -->
         <mat-form-field appearance="fill">
           <mat-label>Estado</mat-label>
-          <input matInput placeholder="Estado (UF)" [(ngModel)]="endereco.estado" name="estado" maxlength="2">
+          <input matInput placeholder="Estado (UF)" [(ngModel)]="endereco.endEstado" name="endEstado" maxlength="2">
         </mat-form-field>
   
         <!-- CEP -->
         <mat-form-field appearance="fill">
           <mat-label>CEP</mat-label>
-          <input matInput placeholder="CEP" [(ngModel)]="endereco.cep" name="cep" pattern="\d{5}-?\d{3}">
+          <input matInput placeholder="CEP" [(ngModel)]="endereco.endCep" name="endCep" pattern="\d{5}-?\d{3}">
         </mat-form-field>
   
-        <mat-form-field appearance="fill">
-          <mat-label>Ativo</mat-label>
-          <input matInput placeholder="Ativo" [(ngModel)]="endereco.ativo" name="ativo">
-        </mat-form-field>
+        
       </form>
     </mat-card-content>
     <mat-card-actions>
