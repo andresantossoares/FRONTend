@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClienteService } from '../cliente.service';
 import { Cliente } from '../cliente.model';
-import { EnderecoService } from '../../endereco/endereco.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,23 +10,26 @@ import { Router } from '@angular/router';
 })
 export class ClienteCreateComponent {
 
-  cliente: Cliente = {
-    cliId: 0,
-    CliNome: '',
-    CliCpf: '',
-    conCelular: '',
-    conTelefoneComercial: '',
-    conEmail: '',
-    endRua: '',
-    endNumero: 0,  
-    endCidade: '',
-    endEstado: '',
-    endCep: '',
-  };
+// cliente-create.component.ts (parte da declaração ou inicialização)
+
+cliente: Cliente = {
+  cliId: 0, // Ajuste para 0 ou null conforme seu modelo
+  // ... Outras propriedades
+  cliNome: '',       // ✅ Correto (camelCase)
+  cliCpf: '',        // ✅ Correto (camelCase)
+  conCelular: '',
+  conTelefoneComercial: '',
+  conEmail: '',
+  endRua: '',
+  endNumero: 0, // Se endNumero for number
+  endCidade: '',
+  endEstado: '',
+  endCep: '',
+  // ...
+};
 
   constructor(
     private clienteService: ClienteService,
-    private endereco: EnderecoService,  
     private router: Router
   ) {}
 

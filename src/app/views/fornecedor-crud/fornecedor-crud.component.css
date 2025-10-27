@@ -1,5 +1,5 @@
 .botao-novo-fornecedor {
-    background-color: #FFD700;
+    background-color: #382420;
     color: #F5F5DC;
     font-weight: bold;
     border-radius: 8px;
@@ -8,7 +8,7 @@
   }
   
   .botao-novo-fornecedor:hover {
-    background-color: #B71C1C;
+    background-color: #FFD700;
     color: #4E342E;
     transform: scale(1.05);
   }

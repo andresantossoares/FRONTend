@@ -18,11 +18,10 @@ export class LivroCreateComponent {
     liDescricao: '',
     liAvaliacao: 0,
     liNumeropagi: 0,
-    liIdioma: '',
-    liDataPubli: new Date(),
-    liDimensoes: '',
-    liAutor: '',
-    fornecedor_id: undefined,
+    forNomeFantasia: '',
+    forCnpj: '',
+    forRazaoSocial:'',
+    
 
   };
 

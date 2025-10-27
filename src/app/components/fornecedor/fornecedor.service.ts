@@ -9,7 +9,7 @@ import { Fornecedor } from './fornecedor.model';
 })
 export class FornecedorService {
 
-  baseUrl: string = "http://localhost:8080/fornecedor";
+  baseUrl: string = "http://localhost:8080/fornecedores";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 

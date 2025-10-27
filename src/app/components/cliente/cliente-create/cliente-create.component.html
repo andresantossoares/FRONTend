@@ -1,15 +1,13 @@
 <mat-card class="cliente-card">
     <mat-card-title>Novo Cliente</mat-card-title>
     <form class="centered-form">
-        <!-- Campos de cliente -->
         <mat-form-field class="full-width-field">
-            <input matInput placeholder="Nome do Cliente" [(ngModel)]="cliente.CliNome" name="CliNome" required>
+            <input matInput placeholder="Nome do Cliente" [(ngModel)]="cliente.cliNome" name="cliNome" required>
         </mat-form-field>
         <mat-form-field class="full-width-field">
-            <input matInput placeholder="CPF" [(ngModel)]="cliente.CliCpf" name="CliCpf" required>
+            <input matInput placeholder="CPF" [(ngModel)]="cliente.cliCpf" name="cliCpf" required>
         </mat-form-field>
 
-        <!-- Campos de contato -->
         <mat-form-field class="full-width-field">
             <input matInput placeholder="Celular" [(ngModel)]="cliente.conCelular" name="conCelular" required>
         </mat-form-field>
@@ -20,7 +18,6 @@
             <input matInput type="email" placeholder="Email" [(ngModel)]="cliente.conEmail" name="conEmail" required>
         </mat-form-field>
 
-        <!-- Novos campos de endereço -->
         <mat-form-field class="full-width-field">
             <input matInput placeholder="Rua" [(ngModel)]="cliente.endRua" name="endRua" required>
         </mat-form-field>
@@ -36,7 +33,6 @@
         <mat-form-field class="full-width-field">
             <input matInput placeholder="CEP" [(ngModel)]="cliente.endCep" name="endCep" required>
         </mat-form-field>
-     
     </form>
 
     <div class="button-container">

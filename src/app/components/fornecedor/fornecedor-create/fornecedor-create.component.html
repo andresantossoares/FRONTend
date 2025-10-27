@@ -1,23 +1,45 @@
-<mat-card>
+<mat-card class="livro-card">
     <mat-card-title>Novo Fornecedor</mat-card-title>
-    <form>
-        <mat-form-field>
-            <input matInput placeholder="Nome fantasia" [(ngModel)]="fornecedor.NomeFantasia" name="NomeFantasia">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="CNPJ" [(ngModel)]="fornecedor.Cnpj" name="Cnpj">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Razão social" [(ngModel)]="fornecedor.RazaoSocial" name="RazaoSocial">
-        </mat-form-field>
+  
+    <form class="centered-form">
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Nome fantasia" [(ngModel)]="fornecedor.forNomeFantasia" name="forNomeFantasia">
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="CNPJ" [(ngModel)]="fornecedor.forCnpj" name="forCnpj">
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Razão social" [(ngModel)]="fornecedor.forRazaoSocial" name="forRazaoSocial">
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Telefone Comercial (opcional)" [(ngModel)]="fornecedor.conTelefoneComercial" name="conTelefoneComercial">
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput type="email" placeholder="Email" [(ngModel)]="fornecedor.conEmail" name="conEmail" required>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Rua" [(ngModel)]="fornecedor.endRua" name="endRua" required>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput type="number" placeholder="Número (opcional)" [(ngModel)]="fornecedor.endNumero" name="endNumero">
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Cidade" [(ngModel)]="fornecedor.endCidade" name="endCidade" required>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Estado" [(ngModel)]="fornecedor.endEstado" name="endEstado" required>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="CEP" [(ngModel)]="fornecedor.endCep" name="endCep" required>
+      </mat-form-field>
+  
+      <div class="button-container">
+        <button mat-raised-button class="salvar-btn" (click)="createFornecedor()">
+          Salvar
+        </button>
+        <button mat-raised-button class="cancelar-btn" (click)="cancel()">
+          Cancelar
+        </button>
+      </div>
     </form>
-
-    <button mat-raised-button (click)="createFornecedor()" color="primary">
-        Salvar
-    </button>
-   
-    <button mat-raised-button (click)="cancel()">
-        Cancelar
-    </button>
-
-</mat-card>
+  </mat-card>

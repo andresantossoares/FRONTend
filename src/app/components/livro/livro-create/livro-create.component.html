@@ -2,14 +2,6 @@
   <mat-card-title>Novo Livro</mat-card-title>
 
   <form class="centered-form">
-    <mat-form-field>
-      <mat-select placeholder="Fornecedor" [(ngModel)]="livro.fornecedor_id" name="fornecedor_id">
-        <mat-option *ngFor="let fornecedor_id of fornecedor" [value]="fornecedor_id">
-          {{ fornecedor_id.NomeFantasia }} - {{ fornecedor_id.RazaoSocial }}
-        </mat-option>
-      </mat-select>
-  </mat-form-field>  <!-- Fecha aqui o mat-form-field -->
-
     <mat-form-field class="full-width-field">
       <input matInput placeholder="Nome do livro" [(ngModel)]="livro.liNome" name="liNome">
     </mat-form-field>
@@ -25,31 +17,24 @@
     <mat-form-field class="full-width-field">
       <input matInput placeholder="Número de páginas" [(ngModel)]="livro.liNumeropagi" name="liNumeropagi">
     </mat-form-field>
-
     <mat-form-field class="full-width-field">
-      <input matInput placeholder="Idioma" [(ngModel)]="livro.liIdioma" name="liIdioma">
+      <input matInput placeholder="Nome fantasia do fornecedor" [(ngModel)]="livro.forNomeFantasia" name="forNomeFantasia">
+    </mat-form-field>
+    <mat-form-field class="full-width-field">
+      <input matInput placeholder="Cnpj do fornecedor" [(ngModel)]="livro.forCnpj" name="forCnpj">
+    </mat-form-field>
+    <mat-form-field class="full-width-field">
+      <input matInput placeholder="razão social do fornecedor" [(ngModel)]="livro.forRazaoSocial" name="forRazaoSocial">
     </mat-form-field>
 
-    <mat-form-field class="full-width-field">
-      <input matInput placeholder="Data de publicação" [(ngModel)]="livro.liDataPubli" name="liDataPubli">
-    </mat-form-field>
+    <div class="button-container">
+      <button mat-raised-button class="salvar-btn" (click)="createLivro()">
+        Salvar
+      </button>
 
-    <mat-form-field class="full-width-field">
-      <input matInput placeholder="Dimensões (tamanho)" [(ngModel)]="livro.liDimensoes" name="liDimensoes">
-    </mat-form-field>
-
-    <mat-form-field class="full-width-field">
-      <input matInput placeholder="Autor" [(ngModel)]="livro.liAutor" name="liAutor">
-    </mat-form-field>
+      <button mat-raised-button class="cancelar-btn" (click)="cancel()">
+        Cancelar
+      </button>
+    </div>
   </form>
-
-  <div class="button-container">
-    <button mat-raised-button class="salvar-btn" (click)="createLivro()" color="primary">
-      Salvar
-    </button>
-
-    <button mat-raised-button class="cancelar-btn" (click)="cancel()">
-      Cancelar
-    </button>
-  </div>
 </mat-card>

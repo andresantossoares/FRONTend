@@ -1,7 +1,8 @@
 export interface Cliente {
   cliId: 0
-  CliNome: string;
-  CliCpf: string;  
+  
+    cliNome: string; // ✅ Agora alinha com o HTML
+    cliCpf: string;  // ✅ Agora alinha com o HTML
 
   conCelular: string;
   conTelefoneComercial?: string;

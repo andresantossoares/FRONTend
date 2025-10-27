@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #4E342E; /* COR DE FUNDO: Cinza claro. Troque por #ffffff (branco), #e3f2fd (azul claro), etc. */
+    background-color: #382420; /* COR DE FUNDO: Cinza claro. Troque por #ffffff (branco), #e3f2fd (azul claro), etc. */
     border-radius: 8px; /* Opcional: Arredonda as bordas para um visual mais moderno */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
 }
@@ -27,7 +27,7 @@
     align-items: center;
     width: 100%;
     margin-bottom: 20px;
-    background-color: #4E342E; /* COR DE FUNDO: Cinza muito claro para o form. Remova se não quiser. */
+    background-color: #382420; /* COR DE FUNDO: Cinza muito claro para o form. Remova se não quiser. */
     padding: 15px;
     border-radius: 4px; /* Opcional: Arredonda o form */
 }
@@ -41,7 +41,7 @@
 
 /* Opcional: Mudar cor de fundo dos mat-form-field (inputs) */
 ::ng-deep .full-width-field .mat-mdc-form-field {
-    background-color: #4E342E; /* Fundo branco nos campos de input */
+    background-color: #382420; /* Fundo branco nos campos de input */
 }
 
 /* Estilos para o container dos botões */

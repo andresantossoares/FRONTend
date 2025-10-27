@@ -1,9 +1,9 @@
 table{
     width: 100%;
-    background-color: rgb(75, 75, 75);
+    background-color:rgb(53, 51, 51);
 }
 .edit > i{
-    color: rgb(247, 247, 247);
+    color: rgb(0, 255, 234);
 }
 
 .delete > i{

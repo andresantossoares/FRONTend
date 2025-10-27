@@ -1,8 +1,66 @@
-form{
+.livro-card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #382420; /* Fundo marrom escuro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-button{
+::ng-deep .livro-card .mat-mdc-card-title {
+    background-color: #382420; /* Fundo cinza claro */
+    color: #333; /* Texto escuro */
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.centered-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #382420; /* Fundo branco */
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.full-width-field {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+}
+
+::ng-deep .full-width-field .mat-mdc-text-field-wrapper {
+    background-color: #382420; /* Cinza muito claro */
+    border-radius: 4px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.salvar-btn {
     margin: 20px 15px 0px 0px;
+    padding: 10px 20px;
+}
+
+.cancelar-btn {
+    margin: 20px 15px 0px 0px;
+    padding: 10px 20px;
+}
+
+button {
+    min-width: 100px;
 }
