@@ -8,6 +8,7 @@ import { ClienteCreateComponent } from './components/cliente/cliente-create/clie
 import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
 import { LivroCrudComponent } from './views/livro-crud/livro-crud.component';
 import { LivroCreateComponent } from './components/livro/livro-create/livro-create.component';
+import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
 
 
 //configuração para rotear entre as paginas na home
@@ -38,6 +39,9 @@ const routes: Routes = [
   },
   {path: "livro/create",
     component: LivroCreateComponent
+  },
+  {path: "fornecedor/read",
+    component: FornecedorReadComponent
   }
 
 ];

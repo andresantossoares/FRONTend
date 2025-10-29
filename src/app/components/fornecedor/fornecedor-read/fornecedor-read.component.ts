@@ -15,9 +15,9 @@ export class FornecedorReadComponent implements OnInit {
   constructor(private fornecedorService: FornecedorService) { }
 
   ngOnInit(): void {
-    this.fornecedorService.read().subscribe(fornecedor => {
-      this.fornecedor = fornecedor
-      console.log(fornecedor)  
+    this.fornecedorService.read().subscribe((fornecedor: Fornecedor[]) => {
+      this.fornecedor = fornecedor;
+      console.log(fornecedor);
     })
   }
 
