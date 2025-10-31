@@ -1,0 +1,67 @@
+<div class="home-container">
+    <!-- Boas-vindas -->
+    <mat-card class="welcome-card">
+      <mat-card-title>Bem-vindo à Biblioteca!</mat-card-title>
+      <mat-card-content>
+        Aqui você pode gerenciar livros, clientes, fornecedores e formas de pagamento.
+      </mat-card-content>
+    </mat-card>
+  
+    <!-- Estatísticas -->
+    <div class="stats-grid">
+      <mat-card class="stat-card">
+        <mat-icon>menu_book</mat-icon>
+        <div>
+          <h2>128</h2>
+          <p>Livros cadastrados</p>
+        </div>
+      </mat-card>
+  
+      <mat-card class="stat-card">
+        <mat-icon>people</mat-icon>
+        <div>
+          <h2>56</h2>
+          <p>Clientes ativos</p>
+        </div>
+      </mat-card>
+  
+      <mat-card class="stat-card">
+        <mat-icon>local_shipping</mat-icon>
+        <div>
+          <h2>9</h2>
+          <p>Fornecedores</p>
+        </div>
+      </mat-card>
+  
+      <mat-card class="stat-card">
+        <mat-icon>payment</mat-icon>
+        <div>
+          <h2>4</h2>
+          <p>Formas de pagamento</p>
+        </div>
+      </mat-card>
+    </div>
+  
+    <!-- Atalhos rápidos -->
+    <mat-card class="shortcut-card">
+      <mat-card-title>Atalhos Rápidos</mat-card-title>
+      <mat-card-content class="shortcut-buttons">
+        <button class="btn-livro" mat-raised-button routerLink="/livro">
+          <mat-icon>menu_book</mat-icon> Cadastrar Livro
+        </button>
+  
+        <button class="btn-cliente" mat-raised-button routerLink="/cliente">
+          <mat-icon>person_add</mat-icon> Novo Cliente
+        </button>
+  
+        <button class="btn-fornecedor" mat-raised-button routerLink="/fornecedores">
+          <mat-icon>local_shipping</mat-icon> Ver Fornecedores
+        </button>
+  
+        <button class="btn-pagamento" mat-raised-button routerLink="/formaPagamento">
+          <mat-icon>payment</mat-icon> Forma de Pagamento
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

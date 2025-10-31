@@ -45,6 +45,8 @@ import { ClienteReadComponent } from './components/cliente/cliente-read/cliente-
 import { EnderecoCreateComponent } from './components/endereco/endereco-create/endereco-create.component';
 import { ContatoCreateComponent } from './components/contato/contato-create/contato-create.component';
 import { FormaPagamentoReadComponent } from './components/formaPagamento/forma-pagamento-read/forma-pagamento-read.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { FornecedorDeleteComponent } from './components/fornecedor/fornecedor-delete/fornecedor-delete.component';
 
 registerLocaleData(localePt);
 
@@ -67,7 +69,9 @@ registerLocaleData(localePt);
     ClienteReadComponent,
     EnderecoCreateComponent,
     ContatoCreateComponent,
-    FormaPagamentoReadComponent
+    FormaPagamentoReadComponent,
+    InicioComponent,
+    FornecedorDeleteComponent
     // Removido: MatButtonModule (não pertence aqui)
   ],
   imports: [

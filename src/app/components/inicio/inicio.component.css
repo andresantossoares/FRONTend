@@ -1,0 +1,107 @@
+:root {
+    --azul-escuro: #1b2a41;
+    --azul-medio: #274c77;
+    --azul-claro: #6096ba;
+    --azul-hover: #3a6ea5;
+    --cinza-azulado: #e9eef4;
+  }
+  
+  /* Layout principal */
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    background-color: #1b2a41;
+  }
+  
+  /* Card base */
+  mat-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    color: white;
+  }
+  
+  /* ---- Boas-vindas ---- */
+  .welcome-card {
+    background-color: #274c77;
+    text-align: center;
+    width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-card mat-card-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  
+  /* ---- Estatísticas ---- */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .stat-card {
+    background-color: #274c77;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px;
+    transition:  0.3s;
+  }
+  
+  .stat-card:hover {
+    background-color: #274c77;
+  }
+  
+  .stat-card mat-icon {
+    font-size: 30px;
+    color: #3498DB;
+  }
+  
+  .stat-card h2 {
+    margin: 0;
+  }
+  
+  /* ---- Atalhos rápidos ---- */
+  .shortcut-card {
+    background-color: #274c77;
+    width: 600px;
+    text-align: center;
+  }
+  
+  .shortcut-card mat-card-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #274c77;
+  }
+  
+  /* ---- Botões ---- */
+  .shortcut-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .shortcut-buttons button {
+    color: #1b2a41;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 10px 14px;
+    transition: 0.3s ease;
+    background-color: #e9eef4;
+  }
+  
+  .shortcut-buttons button:hover {
+    background-color: #274c77;
+  }
+  
+  .shortcut-buttons mat-icon {
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  

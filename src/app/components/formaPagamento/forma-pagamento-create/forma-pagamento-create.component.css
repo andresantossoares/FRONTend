@@ -1,8 +1,97 @@
-form{
+/* Styles for the mat-card (main background color) */
+.formaPagamento-card {
+    max-width: 400px; /* Limits width for centering */
+    margin: 0 auto; /* Centers horizontally on the page */
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C3E50; /* BACKGROUND COLOR: Light gray. Change to #ffffff (white), #e3f2fd (light blue), etc. */
+    border-radius: 8px; /* Optional: Rounds corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for emphasis */
+    color: #fff; /* Ensures text is dark for contrast on light background */
 }
 
-button{
-    margin: 20px 15px 0px 0px;
+/* Optional: Style the mat-card-title (title) with a different background */
+::ng-deep .formaPagamento-card .mat-mdc-card-title {
+    background-color: #2C3E50; /* Optional: Background on title, e.g., darker gray */
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    color: #333; /* Dark text for contrast */
+}
+
+/* Styles for the form (internal background, if you want to differentiate) */
+.centered-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #2C3E50; /* BACKGROUND COLOR: Very light gray for the form. Remove if not needed. */
+    padding: 15px;
+    border-radius: 4px; /* Optional: Rounds the form */
+}
+
+/* Styles for input fields (keeps Material's default but allows customization) */
+.full-width-field {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+}
+
+/* Optional: Change background of mat-form-field (inputs) */
+::ng-deep .full-width-field .mat-mdc-form-field {
+    background-color: #2C3E50; /* White background on input fields */
+    border-radius: 4px; /* Slight rounding */
+}
+
+/* Styles for the button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Styles for buttons */
+.salvar-btn,
+.cancelar-btn {
+    margin: 20px 15px 0 0; /* Your original margin */
+    padding: 10px 20px;
+    min-width: 100px;
+    border-radius: 4px; /* Consistent rounding */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover and focus states for accessibility */
+.salvar-btn:hover,
+.salvar-btn:focus {
+    background-color: #4caf50; /* Green on hover/focus for save button */
+    color: white;
+}
+
+.cancelar-btn:hover,
+.cancelar-btn:focus {
+    background-color: #f44336; /* Red on hover/focus for cancel button */
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .formaPagamento-card {
+        max-width: 90%; /* More flexible on small screens */
+        padding: 15px;
+    }
+    
+    .full-width-field {
+        max-width: 100%; /* Full width on mobile */
+    }
+    
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 5px;
+    }
 }

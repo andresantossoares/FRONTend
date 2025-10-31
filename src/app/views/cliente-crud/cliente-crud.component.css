@@ -1,6 +1,6 @@
 .botao-novo-cliente {
-    background-color: #382420;
-    color: #F5F5DC;
+    background-color: #34495E;
+    color: #FFFFFF;
     font-weight: bold;
     border-radius: 8px;
     padding: 10px 20px;
@@ -8,7 +8,7 @@
   }
   
   .botao-novo-cliente:hover {
-    background-color: #FFD700;
+    background-color: #3498DB;
     color: #ffffff;
     transform: scale(1.05);
   }

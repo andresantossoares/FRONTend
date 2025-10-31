@@ -1,6 +1,6 @@
 table {
     width: 100%;
-    background-color: rgb(75, 75, 75);
+    background-color: black;
     
     /* Adicione esta linha para mover a tabela para baixo */
     margin-top: 1000px; 

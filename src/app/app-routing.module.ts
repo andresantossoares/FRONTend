@@ -9,10 +9,16 @@ import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.componen
 import { LivroCrudComponent } from './views/livro-crud/livro-crud.component';
 import { LivroCreateComponent } from './components/livro/livro-create/livro-create.component';
 import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { FornecedorDeleteComponent } from './components/fornecedor/fornecedor-delete/fornecedor-delete.component';
 
 
 //configuração para rotear entre as paginas na home
 const routes: Routes = [
+  {
+    path: "",
+    component: InicioComponent
+  },
   {
     path: "fpagamentos",
     component: FormaPagamentoCrudComponent
@@ -42,7 +48,10 @@ const routes: Routes = [
   },
   {path: "fornecedor/read",
     component: FornecedorReadComponent
-  }
+  },
+{ path: "fornecedor/delete/:forId", component: FornecedorDeleteComponent },
+
+
 
 ];
 

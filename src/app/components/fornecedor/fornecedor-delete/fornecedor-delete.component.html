@@ -1,0 +1,57 @@
+<mat-card class="Fornecedor-card" *ngIf="!isLoading && fornecedor">
+    <mat-card-title>Excluir Fornecedor</mat-card-title>
+  
+    <form class="centered-form">
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Nome fantasia" [value]="fornecedor?.forNomeFantasia" name="forNomeFantasia" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="CNPJ" [value]="fornecedor?.forCnpj" name="forCnpj" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Razão social" [value]="fornecedor?.forRazaoSocial" name="forRazaoSocial" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Telefone Comercial (opcional)" [value]="fornecedor?.conTelefoneComercial" name="conTelefoneComercial" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput type="email" placeholder="Email" [value]="fornecedor?.conEmail" name="conEmail" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Rua" [value]="fornecedor?.endRua" name="endRua" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput type="number" placeholder="Número (opcional)" [value]="fornecedor?.endNumero" name="endNumero" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Cidade" [value]="fornecedor?.endCidade" name="endCidade" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Estado" [value]="fornecedor?.endEstado" name="endEstado" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="CEP" [value]="fornecedor?.endCep" name="endCep" readonly>
+      </mat-form-field>
+  
+      <div class="button-container">
+        <button mat-raised-button class="excluir-btn" (click)="deleteFornecedor()">
+          Excluir
+        </button>
+        <button mat-raised-button class="cancelar-btn" (click)="cancel()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </mat-card>
+  
+  <!-- Estado de carregamento -->
+  <div *ngIf="isLoading" class="loading-container">
+    <p>Carregando dados do fornecedor...</p>
+    <!-- Opcional: adicione um spinner, ex.: <mat-spinner></mat-spinner> -->
+  </div>
+  
+  <!-- Estado de erro ou fornecedor não encontrado -->
+  <div *ngIf="!isLoading && !fornecedor" class="error-container">
+    <p>Fornecedor não encontrado ou erro ao carregar dados.</p>
+    <button mat-raised-button (click)="cancel()">Voltar</button>
+  </div>

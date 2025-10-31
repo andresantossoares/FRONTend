@@ -1,5 +1,5 @@
 export interface Fornecedor{
-    fId: 0;
+  forId: 0;
     forNomeFantasia: string;
     forCnpj: string;
     forRazaoSocial: string;

@@ -1,37 +1,36 @@
-<mat-card>
+<mat-card class="formaPagamento-card">
     <mat-card-title>Nova Forma de Pagamento</mat-card-title>
-    <form>
-        <mat-form-field>
-            <input matInput placeholder="Descrição" [(ngModel)]= "formaPagamento.descricao" name="descricao">
+
+    <form class="centered-form">
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Descrição" [(ngModel)]="formaPagamento.descricao" name="descricao">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Tipo de pagamento" [(ngModel)]= "formaPagamento.tipo" name="tipo">
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Tipo de pagamento" [(ngModel)]="formaPagamento.tipo" name="tipo">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Numero de parcelas" [(ngModel)]= "formaPagamento.numero_parcelas" name="numero_parcelas">
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Numero de parcelas" [(ngModel)]="formaPagamento.numero_parcelas" name="numero_parcelas">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Dias entre as parcelas" [(ngModel)]= "formaPagamento.dias_entre_parcelas" name="dias_entre_parcelas">
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Dias entre as parcelas" [(ngModel)]="formaPagamento.dias_entre_parcelas" name="dias_entre_parcelas">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Permitir troco ?" [(ngModel)]= "formaPagamento.permite_troco" name="permite_troco">
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Permitir troco ?" [(ngModel)]="formaPagamento.permite_troco" name="permite_troco">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Taxa percentual" [(ngModel)]= "formaPagamento.taxa_percentual" name="taxa_percentual">
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Taxa percentual" [(ngModel)]="formaPagamento.taxa_percentual" name="taxa_percentual">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Ativo ?" [(ngModel)]= "formaPagamento.ativo" name="ativo">
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Ativo ?" [(ngModel)]="formaPagamento.ativo" name="ativo">
         </mat-form-field>
 
+        <div class="button-container">
+            <button mat-raised-button class="salvar-btn" (click)="createFormaPagamento()">
+                Salvar
+            </button>
+            <button mat-raised-button class="cancelar-btn" (click)="cancel()">
+                Cancelar
+            </button>
+        </div>
     </form>
-
-    <button mat-raised-button (click)="createFormaPagamento()">
-        Salvar
-    </button>
-   
-    <button mat-raised-button (click)="cancel()">
-        Cancelar
-    </button>
-
 </mat-card>
-

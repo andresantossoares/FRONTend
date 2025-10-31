@@ -12,7 +12,7 @@ import { Fornecedor } from '../fornecedor.model';
 export class FornecedorCreateComponent  {
 
  fornecedor: Fornecedor = {
-  fId: 0,
+  forId: 0,
   forNomeFantasia: '',  
   forCnpj: '',         
   forRazaoSocial: '',  

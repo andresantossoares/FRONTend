@@ -10,7 +10,7 @@ import { LivroService } from '../livro.service';
 export class LivroReadComponent implements OnInit {
 
   livro!: Livro[]
-  displayedColumns = ['LiId','LiFornecedor', 'LiNome',  'LiNumeropagi','action']
+  displayedColumns = ['liId', 'liFornecedor', 'liNome',  'liNumeropagi', 'action']
 
   constructor(private livroService: LivroService) { }
 

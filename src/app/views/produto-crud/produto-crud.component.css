@@ -1,6 +1,6 @@
 .botao-novo-produto {
-    background-color: #382420;
-    color: #F5F5DC;
+    background-color: #2C3E50;
+    color: #FFFFFF;
     font-weight: bold;
     border-radius: 8px;
     padding: 10px 20px;
@@ -8,8 +8,8 @@
   }
   
   .botao-novo-produto:hover {
-    background-color: #FFD700;
-    color: #4E342E;
+    background-color: #3498DB;
+    color: #FFFFFF;
     transform: scale(1.05);
   }
   

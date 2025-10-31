@@ -11,7 +11,7 @@ import { FormaPagamentoService } from '../forma-pagamento.service';
 export class FormaPagamentoCreateComponent {
 
   formaPagamento: FormaPagamento = {
-    FId: 0,
+    fId: 0,
     descricao: '',
     tipo: '',
     numero_parcelas: 0,

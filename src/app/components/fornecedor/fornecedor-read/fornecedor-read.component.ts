@@ -10,7 +10,7 @@ import { FornecedorService } from '../fornecedor.service';
 export class FornecedorReadComponent implements OnInit {
 
   fornecedor!: Fornecedor[]
-  displayedColumns = ['fId','fNomeFantasia', 'fCnpj',  'fRazaoSocial', 'action']
+  displayedColumns = ['forId','forNomeFantasia', 'forCnpj',  'forRazaoSocial', 'action']
 
   constructor(private fornecedorService: FornecedorService) { }
 

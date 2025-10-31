@@ -1,5 +1,5 @@
 export interface FormaPagamento{
-    FId: number
+    fId: number
     descricao: string
     tipo: string
     numero_parcelas: number

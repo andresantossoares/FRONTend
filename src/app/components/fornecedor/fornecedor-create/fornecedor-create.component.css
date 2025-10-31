@@ -1,4 +1,4 @@
-.livro-card {
+.Fornecedor-card {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -6,13 +6,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #382420; /* Fundo marrom escuro */
+    background-color: #2C3E50; /* Fundo marrom escuro */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-::ng-deep .livro-card .mat-mdc-card-title {
-    background-color: #382420; /* Fundo cinza claro */
+::ng-deep .Fornecedor-card .mat-mdc-card-title {
+    background-color: #2C3E50; /* Fundo cinza claro */
     color: #333; /* Texto escuro */
     padding: 10px;
     border-radius: 4px;
@@ -27,7 +27,7 @@
     align-items: center;
     width: 100%;
     margin-bottom: 20px;
-    background-color: #382420; /* Fundo branco */
+    background-color: #2C3E50; /* Fundo branco */
     padding: 15px;
     border-radius: 4px;
 }
@@ -39,7 +39,7 @@
 }
 
 ::ng-deep .full-width-field .mat-mdc-text-field-wrapper {
-    background-color: #382420; /* Cinza muito claro */
+    background-color: #2C3E50; /* Cinza muito claro */
     border-radius: 4px;
 }
 

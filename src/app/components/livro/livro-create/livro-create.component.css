@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #382420; /* Marrom escuro para tema "livro" */
+    background-color: #2C3E50; /* Marrom escuro para tema "livro" */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -29,7 +29,7 @@
     align-items: center;
     width: 100%;
     margin-bottom: 15px; /* Reduzido para compactar */
-    background-color: #382420; /* Cinza claro para contraste */
+    background-color: #2C3E50; /* Cinza claro para contraste */
     padding: 15px;
     border-radius: 4px;
 }
@@ -41,7 +41,7 @@
 }
 
 ::ng-deep .full-width-field .mat-mdc-form-field {
-    background-color: #070606; /* Fundo branco nos inputs */
+    background-color: #2C3E50; /* Fundo branco nos inputs */
     border-radius: 4px;
 }
 
