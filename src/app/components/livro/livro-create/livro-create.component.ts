@@ -17,7 +17,7 @@ export class LivroCreateComponent {
     liNome: '',
     liDescricao: '',
     liAvaliacao: 0,
-    liNumeropagi: 0,
+    liNumeroPagi: 0,
     forNomeFantasia: '',
     forCnpj: '',
     forRazaoSocial:'',

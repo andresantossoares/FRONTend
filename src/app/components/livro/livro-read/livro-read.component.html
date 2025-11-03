@@ -6,9 +6,9 @@
         <td mat-cell *matCellDef="let row">{{row.liId}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="liFornecedor">
-        <th mat-header-cell *matHeaderCellDef>Editora</th>
-        <td mat-cell *matCellDef="let row">{{row.liFornecedor}}</td>
+      <ng-container matColumnDef="liAvaliacao">
+        <th mat-header-cell *matHeaderCellDef>Avaliação</th>
+        <td mat-cell *matCellDef="let row">{{row.liAvaliacao}}</td>
       </ng-container>
 
       <ng-container matColumnDef="liNome">
@@ -16,18 +16,19 @@
         <td mat-cell *matCellDef="let row">{{row.liNome}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="liNumeropagi">
+      <ng-container matColumnDef="liNumeroPagi">
         <th mat-header-cell *matHeaderCellDef>numero de paginas</th>
-        <td mat-cell *matCellDef="let row">{{row.liNumeropagi}}</td>
+        <td mat-cell *matCellDef="let row">{{row.liNumeroPagi}}</td>
       </ng-container>
 
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef>Ações</th>                    
         <td mat-cell *matCellDef="let row">
-          <a routerLink="/livro/update/{{ row.liId }}" class="edit">
+          <a [routerLink]="['/livro/update', row.liId]" class="edit">
             <i class="material-icons">edit</i>
           </a>
-          <a routerLink="/livro/delete/{{ row.liId }}" class="delete">
+          
+          <a [routerLink]="['/livro/delete', row.liId]" class="delete">
             <i class="material-icons">delete</i>
           </a>
         </td>

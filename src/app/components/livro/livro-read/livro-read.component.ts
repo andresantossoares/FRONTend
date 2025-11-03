@@ -10,15 +10,15 @@ import { LivroService } from '../livro.service';
 export class LivroReadComponent implements OnInit {
 
   livro!: Livro[]
-  displayedColumns = ['liId', 'liFornecedor', 'liNome',  'liNumeropagi', 'action']
+  displayedColumns = ['liId', 'liAvaliacao', 'liNome',  'liNumeroPagi', 'action']
 
   constructor(private livroService: LivroService) { }
 
   ngOnInit(): void {
-    this.livroService.read().subscribe(livro => {
-      this.livro = livro
-      console.log(livro)  
-    })
-  }
+    this.livroService.read().subscribe((resposta: Livro[]) => {
+      this.livro = resposta;
+      console.log(this.livro);
+    });
 
+}
 }

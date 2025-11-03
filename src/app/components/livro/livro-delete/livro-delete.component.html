@@ -1,0 +1,47 @@
+<mat-card class="livro-card" >
+    <mat-card-title>Excluir Livro</mat-card-title>
+  
+    <form class="centered-form">
+    <mat-form-field class="full-width-field">
+     <input matInput placeholder="nome do livro" [value]="livro?.liNome" name="liNome" readonly>
+    </mat-form-field>
+     <mat-form-field class="full-width-field">
+     <input matInput placeholder="Descrição do livro fantasia" [value]="livro?.liDescricao" name="liDescricao" readonly>
+    </mat-form-field>
+    <mat-form-field class="full-width-field">
+     <input matInput placeholder="Avaliação do livro" [value]="livro?.liAvaliacao" name="liAvaliacao" readonly>
+    </mat-form-field>
+
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Nome fantasia" [value]="livro?.forNomeFantasia" name="forNomeFantasia" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="CNPJ" [value]="livro?.forCnpj" name="forCnpj" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Razão social" [value]="livro?.forRazaoSocial" name="forRazaoSocial" readonly>
+      </mat-form-field>
+      
+  
+      <div class="button-container">
+        <button mat-raised-button class="excluir-btn" (click)="deleteLivro()">
+          Excluir
+        </button>
+        <button mat-raised-button class="cancelar-btn" (click)="cancel()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </mat-card>
+  
+  <!-- Estado de carregamento -->
+  <div *ngIf="isLoading" class="loading-container">
+    <p>Carregando dados do livro...</p>
+    <!-- Opcional: adicione um spinner, ex.: <mat-spinner></mat-spinner> -->
+  </div>
+  
+  <!-- Estado de erro ou livro não encontrado -->
+  <div *ngIf="!isLoading && !livro" class="error-container">
+    <p>livro não encontrado ou erro ao carregar dados.</p>
+    <button mat-raised-button (click)="cancel()">Voltar</button>
+  </div>

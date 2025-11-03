@@ -1,18 +1,12 @@
 <mat-card class="formaPagamento-card">
-    <mat-card-title>Nova Forma de Pagamento</mat-card-title>
+    <mat-card-title>Atualizar Forma de Pagamento</mat-card-title>
 
     <form class="centered-form">
         <mat-form-field class="full-width-field">
             <input matInput placeholder="Descrição" [(ngModel)]="formaPagamento.descricao" name="descricao">
         </mat-form-field>
         <mat-form-field class="full-width-field">
-            <mat-label>Tipo de pagamento</mat-label>
-            <mat-select [(ngModel)]="formaPagamento.tipo" name="tipo">
-                <mat-option value="credito">Crédito</mat-option>
-                <mat-option value="debito">Débito</mat-option>
-                <mat-option value="pix">Pix</mat-option>
-                <mat-option value="Dinheiro">Dinheiro</mat-option>
-            </mat-select>
+            <input matInput placeholder="Tipo de pagamento" [(ngModel)]="formaPagamento.tipo" name="tipo">
         </mat-form-field>
         <mat-form-field class="full-width-field">
             <input matInput placeholder="Numero de parcelas" [(ngModel)]="formaPagamento.numero_parcelas" name="numero_parcelas">
@@ -31,7 +25,7 @@
         </mat-form-field>
 
         <div class="button-container">
-            <button mat-raised-button class="salvar-btn" (click)="createFormaPagamento()">
+            <button mat-raised-button class="update" (click)="updateFormaPagamento()">
                 Salvar
             </button>
             <button mat-raised-button class="cancelar-btn" (click)="cancel()">

@@ -4,7 +4,7 @@ export interface Livro {
   liNome: string;
   liDescricao: string;
   liAvaliacao: number;
-  liNumeropagi: number;
+  liNumeroPagi: number;
   
   forNomeFantasia: string;
   forCnpj: string;

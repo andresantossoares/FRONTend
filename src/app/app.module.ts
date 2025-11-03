@@ -47,6 +47,11 @@ import { ContatoCreateComponent } from './components/contato/contato-create/cont
 import { FormaPagamentoReadComponent } from './components/formaPagamento/forma-pagamento-read/forma-pagamento-read.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { FornecedorDeleteComponent } from './components/fornecedor/fornecedor-delete/fornecedor-delete.component';
+import { LivroDeleteComponent } from './components/livro/livro-delete/livro-delete.component';
+import { LivroUpdateComponent } from './components/livro/livro-update/livro-update.component';
+import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
+import { FormaPagamentoUpdateComponent } from './components/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
+import { FormaPagamentoDeleteComponent } from './components/formaPagamento/forma-pagamento-delete/forma-pagamento-delete.component';
 
 registerLocaleData(localePt);
 
@@ -71,7 +76,12 @@ registerLocaleData(localePt);
     ContatoCreateComponent,
     FormaPagamentoReadComponent,
     InicioComponent,
-    FornecedorDeleteComponent
+    FornecedorDeleteComponent,
+    LivroDeleteComponent,
+    LivroUpdateComponent,
+    FornecedorUpdateComponent,
+    FormaPagamentoUpdateComponent,
+    FormaPagamentoDeleteComponent
     // Removido: MatButtonModule (não pertence aqui)
   ],
   imports: [

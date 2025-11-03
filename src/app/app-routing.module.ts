@@ -11,6 +11,10 @@ import { LivroCreateComponent } from './components/livro/livro-create/livro-crea
 import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { FornecedorDeleteComponent } from './components/fornecedor/fornecedor-delete/fornecedor-delete.component';
+import { LivroDeleteComponent } from './components/livro/livro-delete/livro-delete.component';
+import { LivroUpdateComponent } from './components/livro/livro-update/livro-update.component';
+import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
+import { FormaPagamentoUpdateComponent } from './components/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
 
 
 //configuração para rotear entre as paginas na home
@@ -49,8 +53,21 @@ const routes: Routes = [
   {path: "fornecedor/read",
     component: FornecedorReadComponent
   },
-{ path: "fornecedor/delete/:forId", component: FornecedorDeleteComponent },
+  { path: "fornecedor/delete/:forId",
+    component: FornecedorDeleteComponent 
+  },
 
+  { path: "livro/delete/:liId", 
+    component: LivroDeleteComponent 
+  },
+  { path: "livro/update/:liId",
+    component: LivroUpdateComponent  
+  },
+  { path: "fornecedor/update/:forId",
+    component: FornecedorUpdateComponent  
+  },
+  { path: 'formaPagamento/update/:fId', component: FormaPagamentoUpdateComponent },
+  
 
 
 ];
