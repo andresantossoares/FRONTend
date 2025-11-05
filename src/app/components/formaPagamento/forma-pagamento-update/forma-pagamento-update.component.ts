@@ -10,33 +10,28 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class FormaPagamentoUpdateComponent implements OnInit {
 
-
   formaPagamento!: FormaPagamento;
 
   constructor(private formaPagamentoService: FormaPagamentoService, 
     private router: Router, 
     private route: ActivatedRoute) {}
 
-    ngOnInit(): void {
-      const fId = Number (this.route.snapshot.paramMap.get('fId'))
-      this.formaPagamentoService.readById(fId!).subscribe((formaPagamento: FormaPagamento) =>{
-        this.formaPagamento = formaPagamento
-      })
-    
+  ngOnInit(): void {
+    const fId = Number(this.route.snapshot.paramMap.get('fId'));
+    this.formaPagamentoService.readById(fId).subscribe((formaPagamento: FormaPagamento) => {
+      this.formaPagamento = formaPagamento;
+    });
   }
 
   updateFormaPagamento(): void {
     this.formaPagamentoService.update(this.formaPagamento).subscribe(() => {
-      this.formaPagamentoService.showMessage('forma de Pagamento atualizado com sucesso!')
-      this.router.navigate(['/formaPagamento'])
-    })
+      this.formaPagamentoService.showMessage('Forma de pagamento atualizada com sucesso!');
+      this.router.navigate(['/fpagamentos']);
+    });
   }
 
   cancel(): void {
-    this.router.navigate(['/formaPagamento'])
+    this.router.navigate(['/fpagamentos']);
   }
 
-
 }
-
-

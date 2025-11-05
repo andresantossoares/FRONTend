@@ -89,3 +89,10 @@
 ::ng-deep .livro-card button.mat-mdc-raised-button {
     background-color: transparent; /* Deixa o CSS customizado prevalecer */
 }
+
+/* Estado de carregamento */
+.loading-container {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}

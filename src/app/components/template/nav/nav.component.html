@@ -1,19 +1,25 @@
 <mat-sidenav-container class="container">
-    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+    <mat-sidenav #sidenav class="sidenav" mode="over" fixedInViewport="true" fixedTopGap="64">
+        <div class="sidenav-header">
+            <button mat-icon-button (click)="toggleSidenav()" class="close-btn">
+                <mat-icon>close</mat-icon>
+            </button>
+            <h2>Biblioteca</h2>
+        </div>
         <mat-nav-list class="nav-list">
-            <a mat-list-item routerLink="/">
+            <a mat-list-item routerLink="/" (click)="toggleSidenav()">
                 <i class="material-icons">
                     account_balance
                 </i>
                 Início
             </a>
-            <a mat-list-item routerLink="/fpagamentos">
+            <a mat-list-item routerLink="/fpagamentos" (click)="toggleSidenav()">
                 <i class="material-icons">
                     payments
                 </i>
                 Forma de Pagamento
             </a>
-             <a mat-list-item routerLink="/fornecedor">
+             <a mat-list-item routerLink="/fornecedor" (click)="toggleSidenav()">
                 <i class="material-icons">
                     <span class="material-symbols-outlined">
                         person_4
@@ -21,13 +27,13 @@
                 </i>
                 Fornecedores
             </a>
-            <a mat-list-item routerLink="/cliente">
+            <a mat-list-item routerLink="/cliente" (click)="toggleSidenav()">
                 <i class="material-icons">
                     man_2
                 </i>
                 Cliente
             </a>
-            <a mat-list-item routerLink="/livro">
+            <a mat-list-item routerLink="/livro" (click)="toggleSidenav()">
                 <i class="material-icons">
                     menu_book
                 </i>
@@ -37,7 +43,6 @@
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content class="content">
-        <!-- usamos para começar a trabalhar com a navegação a partir do clique... -->
         <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>

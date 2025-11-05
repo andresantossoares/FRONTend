@@ -15,6 +15,9 @@ import { LivroDeleteComponent } from './components/livro/livro-delete/livro-dele
 import { LivroUpdateComponent } from './components/livro/livro-update/livro-update.component';
 import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
 import { FormaPagamentoUpdateComponent } from './components/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
+import { FormaPagamentoDeleteComponent } from './components/formaPagamento/forma-pagamento-delete/forma-pagamento-delete.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 
 
 //configuração para rotear entre as paginas na home
@@ -67,7 +70,13 @@ const routes: Routes = [
     component: FornecedorUpdateComponent  
   },
   { path: 'formaPagamento/update/:fId', component: FormaPagamentoUpdateComponent },
-  
+  { path: 'formaPagamento/delete/:fId', component: FormaPagamentoDeleteComponent },
+  { path: "cliente/update/:cliId",
+    component: ClienteUpdateComponent  
+  },
+  { path: "cliente/delete/:cliId",
+    component: ClienteDeleteComponent 
+  },
 
 
 ];

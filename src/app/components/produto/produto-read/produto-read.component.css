@@ -1,16 +1,78 @@
+:host {
+    display: block;
+    background-color: #274c77;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.table-container {
+    padding: 20px;
+    background-color: #1b2a41;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.mat-elevation-z4 {
+    background-color: #1b2a41;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 table {
     width: 100%;
-    background-color: black;
-    
-    /* Adicione esta linha para mover a tabela para baixo */
-    margin-top: 1000px; 
+    background-color: transparent;
 }
 
-.edit > i{
-    color: rgb(247, 247, 247);
+th {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: 600;
+    padding: 16px;
 }
 
-.delete > i{
-    color: rgb(255, 0, 98);
+td {
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
 }
 
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.botao-novo {
+    margin-bottom: 16px;
+    background-color: #274c77;
+    color: white;
+}
+
+.botao-novo:hover {
+    background-color: #3498DB;
+}
+
+.botao-novo mat-icon {
+    margin-right: 8px;
+}
+
+.edit {
+    color: #6096ba;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.edit:hover {
+    color: #3498DB;
+    transform: scale(1.1);
+}
+
+.delete {
+    color: #e35e6b;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.delete:hover {
+    color: #d32f2f;
+    transform: scale(1.1);
+}

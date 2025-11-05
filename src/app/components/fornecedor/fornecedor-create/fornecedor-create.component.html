@@ -6,13 +6,13 @@
         <input matInput placeholder="Nome fantasia" [(ngModel)]="fornecedor.forNomeFantasia" name="forNomeFantasia">
       </mat-form-field>
       <mat-form-field class="full-width-field">
-        <input matInput placeholder="CNPJ" [(ngModel)]="fornecedor.forCnpj" name="forCnpj">
+        <input matInput placeholder="CNPJ" [(ngModel)]="fornecedor.forCnpj" name="forCnpj" appMask="cnpj" maxlength="18">
       </mat-form-field>
       <mat-form-field class="full-width-field">
         <input matInput placeholder="Razão social" [(ngModel)]="fornecedor.forRazaoSocial" name="forRazaoSocial">
       </mat-form-field>
       <mat-form-field class="full-width-field">
-        <input matInput placeholder="Telefone Comercial (opcional)" [(ngModel)]="fornecedor.conTelefoneComercial" name="conTelefoneComercial">
+        <input matInput placeholder="Telefone Comercial (opcional)" [(ngModel)]="fornecedor.conTelefoneComercial" name="conTelefoneComercial" appMask="telefone" maxlength="14">
       </mat-form-field>
       <mat-form-field class="full-width-field">
         <input matInput type="email" placeholder="Email" [(ngModel)]="fornecedor.conEmail" name="conEmail" required>
@@ -27,10 +27,10 @@
         <input matInput placeholder="Cidade" [(ngModel)]="fornecedor.endCidade" name="endCidade" required>
       </mat-form-field>
       <mat-form-field class="full-width-field">
-        <input matInput placeholder="Estado" [(ngModel)]="fornecedor.endEstado" name="endEstado" required>
+        <input matInput placeholder="Estado (UF)" [(ngModel)]="fornecedor.endEstado" name="endEstado" appMask="estado" maxlength="2" required>
       </mat-form-field>
       <mat-form-field class="full-width-field">
-        <input matInput placeholder="CEP" [(ngModel)]="fornecedor.endCep" name="endCep" required>
+        <input matInput placeholder="CEP" [(ngModel)]="fornecedor.endCep" name="endCep" appMask="cep" maxlength="9" required>
       </mat-form-field>
   
       <div class="button-container">

@@ -5,14 +5,14 @@
             <input matInput placeholder="Nome do Cliente" [(ngModel)]="cliente.cliNome" name="cliNome" required>
         </mat-form-field>
         <mat-form-field class="full-width-field">
-            <input matInput placeholder="CPF" [(ngModel)]="cliente.cliCpf" name="cliCpf" required>
+            <input matInput placeholder="CPF" [(ngModel)]="cliente.cliCpf" name="cliCpf" appMask="cpf" maxlength="14" required>
         </mat-form-field>
 
         <mat-form-field class="full-width-field">
-            <input matInput placeholder="Celular" [(ngModel)]="cliente.conCelular" name="conCelular" required>
+            <input matInput placeholder="Celular" [(ngModel)]="cliente.conCelular" name="conCelular" appMask="celular" maxlength="15" required>
         </mat-form-field>
         <mat-form-field class="full-width-field">
-            <input matInput placeholder="Telefone Comercial (opcional)" [(ngModel)]="cliente.conTelefoneComercial" name="conTelefoneComercial">
+            <input matInput placeholder="Telefone Comercial (opcional)" [(ngModel)]="cliente.conTelefoneComercial" name="conTelefoneComercial" appMask="telefone" maxlength="14">
         </mat-form-field>
         <mat-form-field class="full-width-field">
             <input matInput type="email" placeholder="Email" [(ngModel)]="cliente.conEmail" name="conEmail" required>
@@ -28,10 +28,10 @@
             <input matInput placeholder="Cidade" [(ngModel)]="cliente.endCidade" name="endCidade" required>
         </mat-form-field>
         <mat-form-field class="full-width-field">
-            <input matInput placeholder="Estado" [(ngModel)]="cliente.endEstado" name="endEstado" required>
+            <input matInput placeholder="Estado (UF)" [(ngModel)]="cliente.endEstado" name="endEstado" appMask="estado" maxlength="2" required>
         </mat-form-field>
         <mat-form-field class="full-width-field">
-            <input matInput placeholder="CEP" [(ngModel)]="cliente.endCep" name="endCep" required>
+            <input matInput placeholder="CEP" [(ngModel)]="cliente.endCep" name="endCep" appMask="cep" maxlength="9" required>
         </mat-form-field>
     </form>
 

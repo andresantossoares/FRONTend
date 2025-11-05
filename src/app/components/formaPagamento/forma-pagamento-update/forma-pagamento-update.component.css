@@ -1,53 +1,51 @@
-/* Styles for the mat-card (main background color) */
+/* Card principal para o formulário de forma de pagamento */
 .formaPagamento-card {
-    max-width: 400px; /* Limits width for centering */
-    margin: 0 auto; /* Centers horizontally on the page */
+    max-width: 400px;
+    margin: 0 auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-color: #2C3E50; /* BACKGROUND COLOR: Light gray. Change to #ffffff (white), #e3f2fd (light blue), etc. */
-    border-radius: 8px; /* Optional: Rounds corners for a modern look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for emphasis */
-    color: #fff; /* Ensures text is dark for contrast on light background */
+    background-color: #2C3E50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Optional: Style the mat-card-title (title) with a different background */
+/* Título com fundo azul claro */
 ::ng-deep .formaPagamento-card .mat-mdc-card-title {
-    background-color: #2C3E50; /* Optional: Background on title, e.g., darker gray */
+    background-color: #e3f2fd; /* Azul claro vibrante */
+    color: #1976d2; /* Texto azul escuro */
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 15px;
-    color: #333; /* Dark text for contrast */
+    width: 100%;
+    text-align: center;
 }
 
-/* Styles for the form (internal background, if you want to differentiate) */
+/* Form centralizado com fundo claro */
 .centered-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-bottom: 20px;
-    background-color: #2C3E50; /* BACKGROUND COLOR: Very light gray for the form. Remove if not needed. */
+    margin-bottom: 15px; /* Reduzido para compactar */
+    background-color: #2C3E50; /* Cinza claro para contraste */
     padding: 15px;
-    border-radius: 4px; /* Optional: Rounds the form */
+    border-radius: 4px;
 }
 
-/* Styles for input fields (keeps Material's default but allows customization) */
+/* Campos de input full-width e compactos */
 .full-width-field {
     width: 100%;
-    max-width: 300px;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Margem menor para reduzir altura total */
 }
 
-/* Optional: Change background of mat-form-field (inputs) */
 ::ng-deep .full-width-field .mat-mdc-form-field {
-    background-color: #2C3E50; /* White background on input fields */
-    border-radius: 4px; /* Slight rounding */
+    background-color: #2C3E50; /* Fundo branco nos inputs */
+    border-radius: 4px;
 }
 
-/* Styles for the button container */
+/* Container de botões com gap pequeno */
 .button-container {
     display: flex;
     justify-content: center;
@@ -56,42 +54,58 @@
     margin-top: 10px;
 }
 
-/* Styles for buttons */
-.salvar-btn,
-.cancelar-btn {
-    margin: 20px 15px 0 0; /* Your original margin */
+/* Botões com cores: verde para Atualizar, vermelho para Cancelar */
+.update-btn {
+    background-color: #4caf50; /* Verde vibrante */
+    color: white;
     padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
     min-width: 100px;
-    border-radius: 4px; /* Consistent rounding */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
-/* Hover and focus states for accessibility */
-.update-btn:hover,
-.update-btn:focus {
-    background-color: #4caf50; /* Green on hover/focus for save button */
+.update-btn:hover {
+    background-color: #45a049; /* Verde escuro no hover */
+}
+
+.cancelar-btn {
+    background-color: #ff0000; /* Vermelho para Cancelar */
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-width: 100px;
 }
 
-.cancelar-btn:hover,
-.cancelar-btn:focus {
-    background-color: #f44336; /* Red on hover/focus for cancel button */
-    color: white;
+.cancelar-btn:hover {
+    background-color: #cc0000; /* Vermelho mais escuro no hover */
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .formaPagamento-card {
-        max-width: 90%; /* More flexible on small screens */
-        padding: 15px;
-    }
-    
-    .full-width-field {
-        max-width: 100%; /* Full width on mobile */
-    }
-    
-    .button-container {
-        flex-direction: column; /* Stack buttons vertically on small screens */
-        gap: 5px;
-    }
+/* Override para botões mat-raised-button (remove cor padrão do Material) */
+::ng-deep .formaPagamento-card button.mat-mdc-raised-button {
+    background-color: transparent; /* Deixa o CSS customizado prevalecer */
+}
+
+/* Estado de carregamento */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Estado de erro */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #ff0000;
+    gap: 10px;
 }

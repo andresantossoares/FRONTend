@@ -1,20 +1,20 @@
-/* Card principal para o formulário de livro (fundo marrom escuro) */
-.fornecedor-card {
+/* Card principal para o formulário de cliente */
+.cliente-card {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #2C3E50; /* Marrom escuro para tema "livro" */
+    background-color: #2C3E50;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Título com fundo azul claro */
-::ng-deep .fornecedor-card .mat-mdc-card-title {
-    background-color: #e3f2fd; /* Azul claro vibrante */
-    color: #1976d2; /* Texto azul escuro */
+::ng-deep .cliente-card .mat-mdc-card-title {
+    background-color: #e3f2fd;
+    color: #1976d2;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 15px;
@@ -28,8 +28,8 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-bottom: 15px; /* Reduzido para compactar */
-    background-color: #2C3E50; /* Cinza claro para contraste */
+    margin-bottom: 15px;
+    background-color: #2C3E50;
     padding: 15px;
     border-radius: 4px;
 }
@@ -37,11 +37,11 @@
 /* Campos de input full-width e compactos */
 .full-width-field {
     width: 100%;
-    margin-bottom: 10px; /* Margem menor para reduzir altura total */
+    margin-bottom: 10px;
 }
 
 ::ng-deep .full-width-field .mat-mdc-form-field {
-    background-color: #2C3E50; /* Fundo branco nos inputs */
+    background-color: #2C3E50;
     border-radius: 4px;
 }
 
@@ -54,9 +54,9 @@
     margin-top: 10px;
 }
 
-/* Botões com cores: verde para Salvar, cinza para Cancelar */
+/* Botões com cores: verde para Atualizar, vermelho para Cancelar */
 .update-btn {
-    background-color: #4caf50; /* Verde vibrante */
+    background-color: #4caf50;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -67,11 +67,11 @@
 }
 
 .update-btn:hover {
-    background-color: #45a049; /* Verde escuro no hover */
+    background-color: #45a049;
 }
 
 .cancelar-btn {
-    background-color: #ff0000; /* Cinza para Cancelar */
+    background-color: #ff0000;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -82,12 +82,12 @@
 }
 
 .cancelar-btn:hover {
-    background-color: #757575; /* Cinza mais escuro no hover */
+    background-color: #cc0000;
 }
 
-/* Override para botões mat-raised-button (remove cor padrão do Material) */
-::ng-deep .livro-card button.mat-mdc-raised-button {
-    background-color: transparent; /* Deixa o CSS customizado prevalecer */
+/* Override para botões mat-raised-button */
+::ng-deep .cliente-card button.mat-mdc-raised-button {
+    background-color: transparent;
 }
 
 /* Estado de carregamento */
@@ -109,3 +109,4 @@
     color: #ff0000;
     gap: 10px;
 }
+

@@ -1,0 +1,46 @@
+<mat-card class="cliente-card">
+    <mat-card-title>Excluir Cliente</mat-card-title>
+  
+    <form class="centered-form">
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Nome do Cliente" [value]="cliente?.cliNome" name="cliNome" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="CPF" [value]="cliente?.cliCpf" name="cliCpf" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Celular" [value]="cliente?.conCelular" name="conCelular" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Telefone Comercial (opcional)" [value]="cliente?.conTelefoneComercial" name="conTelefoneComercial" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput type="email" placeholder="Email" [value]="cliente?.conEmail" name="conEmail" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Rua" [value]="cliente?.endRua" name="endRua" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput type="number" placeholder="Número (opcional)" [value]="cliente?.endNumero" name="endNumero" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Cidade" [value]="cliente?.endCidade" name="endCidade" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="Estado" [value]="cliente?.endEstado" name="endEstado" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width-field">
+        <input matInput placeholder="CEP" [value]="cliente?.endCep" name="endCep" readonly>
+      </mat-form-field>
+  
+      <div class="button-container">
+        <button mat-raised-button class="excluir-btn" (click)="deleteCliente()">
+          Excluir
+        </button>
+        <button mat-raised-button class="cancelar-btn" (click)="cancel()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </mat-card>
+

@@ -1,15 +1,10 @@
 export interface Cliente {
-  cliId: 0
-  
-    cliNome: string; // ✅ Agora alinha com o HTML
-    cliCpf: string;  // ✅ Agora alinha com o HTML
-
+  cliId: number;
+  cliNome: string;
+  cliCpf: string;
   conCelular: string;
   conTelefoneComercial?: string;
   conEmail: string;
-
-
-
   endRua: string;
   endNumero?: number;
   endCidade: string;

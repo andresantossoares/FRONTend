@@ -1,1 +1,36 @@
-<p>forma-pagamento-delete works!</p>
+<mat-card class="formaPagamento-card">
+    <mat-card-title>Excluir Forma de Pagamento</mat-card-title>
+
+    <form class="centered-form">
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Descrição" [value]="formaPagamento?.descricao" name="descricao" readonly>
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Tipo de pagamento" [value]="formaPagamento?.tipo" name="tipo" readonly>
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Numero de parcelas" [value]="formaPagamento?.numero_parcelas" name="numero_parcelas" readonly>
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Dias entre as parcelas" [value]="formaPagamento?.dias_entre_parcelas" name="dias_entre_parcelas" readonly>
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Permitir troco ?" [value]="formaPagamento?.permite_troco" name="permite_troco" readonly>
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Taxa percentual" [value]="formaPagamento?.taxa_percentual" name="taxa_percentual" readonly>
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Ativo ?" [value]="formaPagamento?.ativo" name="ativo" readonly>
+        </mat-form-field>
+
+        <div class="button-container">
+            <button mat-raised-button class="excluir-btn" (click)="deleteFormaPagamento()">
+                Excluir
+            </button>
+            <button mat-raised-button class="cancelar-btn" (click)="cancel()">
+                Cancelar
+            </button>
+        </div>
+    </form>
+</mat-card>

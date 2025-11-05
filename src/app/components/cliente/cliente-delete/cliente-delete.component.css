@@ -1,5 +1,14 @@
-/* Card principal para o formulário de forma de pagamento */
-.formaPagamento-card {
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    margin: 20px 15px 0px 0px;
+}
+
+/* Card principal para o formulário de cliente */
+.cliente-card {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -12,9 +21,9 @@
 }
 
 /* Título com fundo azul claro */
-::ng-deep .formaPagamento-card .mat-mdc-card-title {
-    background-color: #e3f2fd; /* Azul claro vibrante */
-    color: #1976d2; /* Texto azul escuro */
+::ng-deep .cliente-card .mat-mdc-card-title {
+    background-color: #e3f2fd;
+    color: #1976d2;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 15px;
@@ -22,30 +31,30 @@
     text-align: center;
 }
 
-/* Form centralizado com fundo claro */
+/* Form centralizado */
 .centered-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-bottom: 15px; /* Reduzido para compactar */
-    background-color: #2C3E50; /* Cinza claro para contraste */
+    margin-bottom: 15px;
+    background-color: #2C3E50;
     padding: 15px;
     border-radius: 4px;
 }
 
-/* Campos de input full-width e compactos */
+/* Campos de input */
 .full-width-field {
     width: 100%;
-    margin-bottom: 10px; /* Margem menor para reduzir altura total */
+    margin-bottom: 10px;
 }
 
 ::ng-deep .full-width-field .mat-mdc-form-field {
-    background-color: #2C3E50; /* Fundo branco nos inputs */
+    background-color: #2C3E50;
     border-radius: 4px;
 }
 
-/* Container de botões com gap pequeno */
+/* Container de botões */
 .button-container {
     display: flex;
     justify-content: center;
@@ -54,9 +63,9 @@
     margin-top: 10px;
 }
 
-/* Botões com cores: vermelho para Excluir, vermelho para Cancelar */
+/* Botões */
 .excluir-btn {
-    background-color: #f44336; /* Vermelho vibrante */
+    background-color: #f44336;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -67,11 +76,11 @@
 }
 
 .excluir-btn:hover {
-    background-color: #d32f2f; /* Vermelho escuro no hover */
+    background-color: #d32f2f;
 }
 
 .cancelar-btn {
-    background-color: #ff0000; /* Vermelho para Cancelar */
+    background-color: #ff0000;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -82,12 +91,7 @@
 }
 
 .cancelar-btn:hover {
-    background-color: #cc0000; /* Vermelho mais escuro no hover */
-}
-
-/* Override para botões mat-raised-button (remove cor padrão do Material) */
-::ng-deep .formaPagamento-card button.mat-mdc-raised-button {
-    background-color: transparent; /* Deixa o CSS customizado prevalecer */
+    background-color: #cc0000;
 }
 
 /* Estados de carregamento e erro */
@@ -97,3 +101,9 @@
     padding: 20px;
     color: #fff;
 }
+
+/* Override para botões mat-raised-button */
+::ng-deep .cliente-card button.mat-mdc-raised-button {
+    background-color: transparent;
+}
+

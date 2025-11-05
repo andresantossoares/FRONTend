@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 // Outros módulos
 import { HttpClientModule } from '@angular/common/http';
@@ -52,6 +53,9 @@ import { LivroUpdateComponent } from './components/livro/livro-update/livro-upda
 import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
 import { FormaPagamentoUpdateComponent } from './components/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
 import { FormaPagamentoDeleteComponent } from './components/formaPagamento/forma-pagamento-delete/forma-pagamento-delete.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { MaskDirective } from './directives/mask.directive';
 
 registerLocaleData(localePt);
 
@@ -81,7 +85,10 @@ registerLocaleData(localePt);
     LivroUpdateComponent,
     FornecedorUpdateComponent,
     FormaPagamentoUpdateComponent,
-    FormaPagamentoDeleteComponent
+    FormaPagamentoDeleteComponent,
+    ClienteUpdateComponent,
+    ClienteDeleteComponent,
+    MaskDirective
     // Removido: MatButtonModule (não pertence aqui)
   ],
   imports: [
@@ -102,6 +109,7 @@ registerLocaleData(localePt);
     MatPaginatorModule,
     MatSortModule,
     MatSelectModule,
+    MatTooltipModule,
     // Outros módulos
     HttpClientModule,
     FormsModule

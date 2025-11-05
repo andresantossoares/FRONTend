@@ -17,18 +17,17 @@ export class LivroUpdateComponent implements OnInit {
     private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const liId = this.route.snapshot.paramMap.get('liId')
-    this.livroService.readById(liId!).subscribe((livro: Livro) =>{
-      this.livro = livro
-    })
-    
+    const liId = this.route.snapshot.paramMap.get('liId');
+    this.livroService.readById(liId!).subscribe((livro: Livro) => {
+      this.livro = livro;
+    });
   }
 
   updateLivro(): void {
     this.livroService.update(this.livro).subscribe(() => {
-      this.livroService.showMessage('livro atualizado com sucesso!')
-      this.router.navigate(['/livro'])
-    })
+      this.livroService.showMessage('Livro atualizado com sucesso!');
+      this.router.navigate(['/livro']);
+    });
   }
 
   cancel(): void {
@@ -37,4 +36,3 @@ export class LivroUpdateComponent implements OnInit {
 
 
 }
-

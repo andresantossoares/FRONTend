@@ -1,11 +1,153 @@
-table{
-    width: 100%;
-    background-color: black
-}
-.edit > i{
-    color: rgb(0, 255, 234);
+:host {
+    display: block;
+    background-color: #274c77;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.delete > i{
-    color: rgb(255, 0, 98);
+.table-container {
+    padding: 20px;
+    background-color: #1b2a41;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.mat-elevation-z4 {
+    background-color: #1b2a41;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.botao-novo {
+    margin-bottom: 16px;
+    background-color: #274c77;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-novo:hover {
+    background-color: #3498DB;
+}
+
+.botao-novo mat-icon {
+    font-size: 20px;
+}
+
+.search-bar {
+    margin-bottom: 16px;
+}
+
+.search-field {
+    width: 100%;
+}
+
+::ng-deep .search-field .mat-mdc-form-field {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+::ng-deep .search-field .mat-mdc-text-field-wrapper {
+    background: transparent;
+}
+
+::ng-deep .search-field input {
+    color: white;
+}
+
+::ng-deep .search-field .mat-mdc-form-field-label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+::ng-deep .search-field .mdc-notched-outline__leading,
+::ng-deep .search-field .mdc-notched-outline__notch,
+::ng-deep .search-field .mdc-notched-outline__trailing {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+table {
+    width: 100%;
+    background-color: transparent;
+}
+
+.tabela {
+    width: 100%;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: 600;
+    padding: 16px;
+}
+
+td {
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.edit {
+    color: #6096ba;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.edit:hover {
+    color: #3498DB;
+    transform: scale(1.1);
+}
+
+.delete {
+    color: #e35e6b;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.delete:hover {
+    color: #d32f2f;
+    transform: scale(1.1);
+}
+
+.no-data {
+    text-align: center;
+    padding: 40px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.no-data mat-icon {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.no-data p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+::ng-deep .mat-mdc-paginator {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border-radius: 0 0 8px 8px;
+}
+
+::ng-deep .mat-mdc-paginator .mat-mdc-select-value,
+::ng-deep .mat-mdc-paginator .mat-mdc-paginator-range-label {
+    color: white;
+}
+
+::ng-deep .mat-mdc-paginator .mat-mdc-icon-button {
+    color: white;
 }

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { FormaPagamento } from './formaPagamento.model';
 
 @Injectable({
@@ -10,6 +10,10 @@ import { FormaPagamento } from './formaPagamento.model';
 export class FormaPagamentoService {
 
   baseUrl: string = "http://localhost:8080/formapagamento";
+  
+  // Subject para emitir eventos de mudança no contador
+  private contadorSubject = new Subject<'increment' | 'decrement'>();
+  contador$ = this.contadorSubject.asObservable();
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
@@ -22,7 +26,18 @@ export class FormaPagamentoService {
   }
 
   create(formaPagamento: FormaPagamento): Observable<FormaPagamento> {
-    return this.http.post<FormaPagamento>(this.baseUrl, formaPagamento);
+    return new Observable(observer => {
+      this.http.post<FormaPagamento>(this.baseUrl, formaPagamento).subscribe({
+        next: (result) => {
+          this.contadorSubject.next('increment');
+          observer.next(result);
+          observer.complete();
+        },
+        error: (err) => {
+          observer.error(err);
+        }
+      });
+    });
   }
 
   read(): Observable<FormaPagamento[]> {
@@ -41,6 +56,17 @@ export class FormaPagamentoService {
 
   delete(fId: number): Observable<FormaPagamento> {
     const url = `${this.baseUrl}/${fId}`;
-    return this.http.delete<FormaPagamento>(url);
+    return new Observable(observer => {
+      this.http.delete<FormaPagamento>(url).subscribe({
+        next: (result) => {
+          this.contadorSubject.next('decrement');
+          observer.next(result);
+          observer.complete();
+        },
+        error: (err) => {
+          observer.error(err);
+        }
+      });
+    });
   }
 }

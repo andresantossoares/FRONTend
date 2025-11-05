@@ -36,4 +36,13 @@
 
 }
 
+.menu-btn {
+    color: white;
+    margin-right: 8px;
+}
+
+.menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 

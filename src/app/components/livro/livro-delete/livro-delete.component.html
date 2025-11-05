@@ -1,4 +1,4 @@
-<mat-card class="livro-card" >
+<mat-card class="livro-card">
     <mat-card-title>Excluir Livro</mat-card-title>
   
     <form class="centered-form">
@@ -33,15 +33,3 @@
       </div>
     </form>
   </mat-card>
-  
-  <!-- Estado de carregamento -->
-  <div *ngIf="isLoading" class="loading-container">
-    <p>Carregando dados do livro...</p>
-    <!-- Opcional: adicione um spinner, ex.: <mat-spinner></mat-spinner> -->
-  </div>
-  
-  <!-- Estado de erro ou livro não encontrado -->
-  <div *ngIf="!isLoading && !livro" class="error-container">
-    <p>livro não encontrado ou erro ao carregar dados.</p>
-    <button mat-raised-button (click)="cancel()">Voltar</button>
-  </div>

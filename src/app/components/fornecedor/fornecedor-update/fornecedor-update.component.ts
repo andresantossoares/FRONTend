@@ -25,7 +25,6 @@ export class FornecedorUpdateComponent implements OnInit {
     });
   }
 
-  // 👇 Adicione este método
   updateFornecedor(): void {
     this.fornecedorService.update(this.fornecedor).subscribe(() => {
       this.fornecedorService.showMessage('Fornecedor atualizado com sucesso!');

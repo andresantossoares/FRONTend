@@ -1,4 +1,4 @@
-<mat-card class="Fornecedor-card" *ngIf="!isLoading && fornecedor">
+<mat-card class="Fornecedor-card">
     <mat-card-title>Excluir Fornecedor</mat-card-title>
   
     <form class="centered-form">
@@ -43,15 +43,3 @@
       </div>
     </form>
   </mat-card>
-  
-  <!-- Estado de carregamento -->
-  <div *ngIf="isLoading" class="loading-container">
-    <p>Carregando dados do fornecedor...</p>
-    <!-- Opcional: adicione um spinner, ex.: <mat-spinner></mat-spinner> -->
-  </div>
-  
-  <!-- Estado de erro ou fornecedor não encontrado -->
-  <div *ngIf="!isLoading && !fornecedor" class="error-container">
-    <p>Fornecedor não encontrado ou erro ao carregar dados.</p>
-    <button mat-raised-button (click)="cancel()">Voltar</button>
-  </div>
