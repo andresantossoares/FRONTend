@@ -1,20 +1,20 @@
 :host {
     display: block;
-    background-color: var(--body-bg, #4a4a4a);
+    background-color: var(--body-bg, #0F172A);
     min-height: 100vh;
     padding: 20px;
 }
 
 .table-container {
     padding: 20px;
-    background-color: var(--card-bg, #64b5f6);
-    color: #ffffff;
+    background-color: var(--card-bg, #134E4A);
+    color: var(--text-dark, #CCFBF1);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .mat-elevation-z4 {
-    background-color: var(--card-bg, #64b5f6);
+    background-color: var(--card-bg, #134E4A);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -25,35 +25,35 @@ table {
 }
 
 th {
-    background-color: #e3f2fd;
-    color: #000000;
+    background-color: var(--table-header-bg, #14B8A6);
+    color: var(--table-header-text, #134E4A);
     font-weight: 600;
     padding: 16px;
 }
 
 th mat-icon,
 th .mat-sort-header-arrow {
-    color: #000000;
+    color: var(--table-header-text, #134E4A);
 }
 
 td {
     padding: 16px;
-    border-bottom: 1px solid rgba(30, 136, 229, 0.2);
-    color: #ffffff;
+    border-bottom: 1px solid var(--border-color, #5EEAD4);
+    color: var(--text-dark, #CCFBF1);
 }
 
 tr:hover {
-    background-color: #e3f2fd;
+    background-color: var(--button-hover, #5EEAD4);
 }
 
 .botao-novo {
     margin-bottom: 16px;
-    background-color: var(--button-bg, #42a5f5);
-    color: #ffffff;
+    background-color: var(--button-bg, #2DD4BF);
+    color: var(--button-text-color, #134E4A);
 }
 
 .botao-novo:hover {
-    background-color: var(--button-bg, #42a5f5);
+    background-color: var(--button-bg, #2DD4BF);
 }
 
 .botao-novo mat-icon {
@@ -61,14 +61,14 @@ tr:hover {
 }
 
 .edit {
-    color: #ffffff;
+    color: var(--button-bg, #4682B4);
     margin-right: 12px;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .edit:hover {
-    color: #ffffff;
+    color: var(--button-hover, #90C3D4);
     transform: scale(1.1);
 }
 

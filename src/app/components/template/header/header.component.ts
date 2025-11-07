@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  isWarm = false;
+  isLight = false;
   private themeSubscription?: Subscription;
 
   constructor(
@@ -18,9 +18,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.isWarm = this.themeService.isWarm();
-    this.themeSubscription = this.themeService.isWarmTheme$.subscribe(
-      isWarm => this.isWarm = isWarm
+    this.isLight = this.themeService.isLight();
+    this.themeSubscription = this.themeService.isLightTheme$.subscribe(
+      isLight => this.isLight = isLight
     );
   }
 

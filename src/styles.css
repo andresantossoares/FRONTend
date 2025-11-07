@@ -8,8 +8,8 @@ html, body {
 
 /* Fundo global - muda com o tema */
 body {
-  background-color: var(--body-bg, #4a4a4a);
-  color: var(--body-text-color, #ffffff);
+  background-color: var(--body-bg, #0F172A);
+  color: var(--body-text-color, #CCFBF1);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -33,15 +33,15 @@ body {
     vertical-align: middle;
 }
 
-/* Estilos para cabeçalhos de tabela - texto preto */
+/* Estilos para cabeçalhos de tabela - texto dinâmico baseado no tema */
 ::ng-deep th .mat-sort-header-arrow {
-  color: #000000 !important;
+  color: var(--table-header-text, #134E4A) !important;
 }
 
 ::ng-deep th .mat-sort-header-stem {
-  background: #000000 !important;
+  background: var(--table-header-text, #134E4A) !important;
 }
 
 ::ng-deep th .mat-sort-header-indicator {
-  color: #000000 !important;
+  color: var(--table-header-text, #134E4A) !important;
 }

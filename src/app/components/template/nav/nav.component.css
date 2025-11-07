@@ -4,13 +4,13 @@
 }
 
 .sidenav{
-    background-color: var(--sidenav-bg, #64b5f6);
+    background-color: var(--sidenav-bg, #14B8A6);
     width: 200px;
     box-shadow: 2px 0 8px rgba(0,0,0,0.2);
 }
 
 .sidenav-header {
-    background-color: var(--sidenav-header-bg, #42a5f5);
+    background-color: var(--sidenav-header-bg, #0F766E);
     padding: 16px;
     display: flex;
     align-items: center;
@@ -19,23 +19,23 @@
 }
 
 .sidenav-header h2 {
-    color: #ffffff;
+    color: var(--header-text-color, #FFFFFF);
     margin: 0;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
 .close-btn {
-    color: #ffffff;
+    color: var(--header-text-color, #FFFFFF);
 }
 
 .sidenav i{
     padding-right: 10px;
-    color: #ffffff;
+    color: var(--header-text-color, #FFFFFF);
 }
 
 .sidenav mat-icon {
-    color: #ffffff;
+    color: var(--header-text-color, #FFFFFF);
 }
 
 .nav-list {
@@ -43,24 +43,24 @@
 }
 
 .nav-list a {
-    color: #ffffff;
+    color: var(--header-text-color, #FFFFFF);
     transition: all 0.3s ease;
 }
 
 .nav-list a:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
+    color: var(--header-text-color, #FFFFFF);
 }
 
 .nav-list a.router-link-active {
     background-color: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    border-left: 4px solid #ffffff;
+    color: var(--header-text-color, #FFFFFF);
+    border-left: 4px solid var(--header-text-color, #FFFFFF);
 }
 
 .content{
     padding: 0;
-    background-color: var(--body-bg, #4a4a4a);
+    background-color: var(--body-bg, #0F172A);
     width: 100%;
     box-sizing: border-box;
     min-height: calc(100vh - 64px);
