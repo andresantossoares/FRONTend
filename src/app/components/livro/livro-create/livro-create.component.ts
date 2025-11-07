@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Livro } from '../livro.model';
 import { LivroService } from '../livro.service';
@@ -10,7 +10,7 @@ import { FornecedorService } from '../../fornecedor/fornecedor.service';
   templateUrl: './livro-create.component.html',
   styleUrls: ['./livro-create.component.css']
 })
-export class LivroCreateComponent {
+export class LivroCreateComponent implements OnInit {
 
   livro: Livro = {
     liId: 0,
@@ -20,24 +20,51 @@ export class LivroCreateComponent {
     liNumeroPagi: 0,
     forNomeFantasia: '',
     forCnpj: '',
-    forRazaoSocial:'',
-    
-
+    forRazaoSocial: ''
   };
 
-fornecedor: Fornecedor[] = [];
+  fornecedores: Fornecedor[] = [];
+  fornecedorSelecionado: Fornecedor | null = null;
 
   constructor(
     private livroService: LivroService,
-  private fornecedorService: FornecedorService,
+    private fornecedorService: FornecedorService,
     private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.fornecedorService.read().subscribe(fornecedor => {
-      this.fornecedor = fornecedor
+    this.fornecedorService.read().subscribe((fornecedores: any[]) => {
+      // Mapeia os fornecedores caso o backend retorne 'id' ao invés de 'forId'
+      this.fornecedores = fornecedores.map((fornecedor: any) => ({
+        forId: fornecedor.forId || fornecedor.id || fornecedor.Id || 0,
+        forNomeFantasia: fornecedor.forNomeFantasia || '',
+        forCnpj: fornecedor.forCnpj || '',
+        forRazaoSocial: fornecedor.forRazaoSocial || '',
+        conCelular: fornecedor.conCelular || '',
+        conTelefoneComercial: fornecedor.conTelefoneComercial || '',
+        conEmail: fornecedor.conEmail || '',
+        endRua: fornecedor.endRua || '',
+        endNumero: fornecedor.endNumero || 0,
+        endCidade: fornecedor.endCidade || '',
+        endEstado: fornecedor.endEstado || '',
+        endCep: fornecedor.endCep || ''
+      }));
+    });
+  }
+
+  onFornecedorChange(fornecedor: Fornecedor | null): void {
+    if (fornecedor) {
+      this.fornecedorSelecionado = fornecedor;
+      // Preenche automaticamente os dados do fornecedor selecionado
+      this.livro.forNomeFantasia = fornecedor.forNomeFantasia || '';
+      this.livro.forCnpj = fornecedor.forCnpj || '';
+      this.livro.forRazaoSocial = fornecedor.forRazaoSocial || '';
+    } else {
+      this.fornecedorSelecionado = null;
+      this.livro.forNomeFantasia = '';
+      this.livro.forCnpj = '';
+      this.livro.forRazaoSocial = '';
     }
-    )
   }
 
   createLivro(): void {

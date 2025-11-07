@@ -1,20 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SidenavService } from '../../../services/sidenav.service';
+import { ThemeService } from '../../../services/theme.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
+  isWarm = false;
+  private themeSubscription?: Subscription;
 
-  constructor(private sidenavService: SidenavService) { }
+  constructor(
+    private sidenavService: SidenavService,
+    private themeService: ThemeService
+  ) { }
 
   ngOnInit(): void {
+    this.isWarm = this.themeService.isWarm();
+    this.themeSubscription = this.themeService.isWarmTheme$.subscribe(
+      isWarm => this.isWarm = isWarm
+    );
+  }
+
+  ngOnDestroy(): void {
+    if (this.themeSubscription) {
+      this.themeSubscription.unsubscribe();
+    }
   }
 
   toggleSidenav(): void {
     this.sidenavService.toggle();
+  }
+
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
   }
 
 }

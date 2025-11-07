@@ -7,14 +7,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #2C3E50; /* COR DE FUNDO: Cinza claro. Troque por #ffffff (branco), #e3f2fd (azul claro), etc. */
+    background-color: var(--card-bg, #64b5f6); /* Azul claro */
+    color: #ffffff;
     border-radius: 8px; /* Opcional: Arredonda as bordas para um visual mais moderno */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
 }
 
 /* Se quiser estilizar o mat-card-title (título) com fundo diferente */
 ::ng-deep .cliente-card .mat-mdc-card-title {
-    background-color: #e0e0e0; /* Opcional: Fundo no título, ex.: cinza mais escuro */
+    background-color: #e3f2fd; /* Azul muito claro para o título */
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 15px;
@@ -27,7 +28,7 @@
     align-items: center;
     width: 100%;
     margin-bottom: 20px;
-    background-color: #2C3E50; /* COR DE FUNDO: Cinza muito claro para o form. Remova se não quiser. */
+    background-color: var(--card-bg, #64b5f6); /* Azul claro para o form */
     padding: 15px;
     border-radius: 4px; /* Opcional: Arredonda o form */
 }
@@ -41,7 +42,7 @@
 
 /* Opcional: Mudar cor de fundo dos mat-form-field (inputs) */
 ::ng-deep .full-width-field .mat-mdc-form-field {
-    background-color: #2C3E50; /* Fundo branco nos campos de input */
+    background-color: #e3f2fd; /* Azul muito claro nos campos de input */
 }
 
 /* Estilos para o container dos botões */

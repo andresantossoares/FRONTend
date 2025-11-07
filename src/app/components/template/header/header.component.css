@@ -1,24 +1,23 @@
 .header{
     display: flex;
     align-items: center;
-    background-color: #233241;
+    background-color: var(--header-bg, #64b5f6);
     position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
-
-
+    color: #ffffff;
 }
 
 .header a {
     display: flex;
     align-items: center;
     text-decoration: none;
-
+    color: #ffffff;
 }
 
 .header i{
-    color: #3498DB;
+    color: #ffffff;
 }
 
 .header .logo {
@@ -36,12 +35,25 @@
 
 }
 
+.spacer {
+    flex: 1 1 auto;
+}
+
 .menu-btn {
     color: white;
     margin-right: 8px;
 }
 
 .menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-btn {
+    color: white;
+    margin-left: 8px;
+}
+
+.theme-btn:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 

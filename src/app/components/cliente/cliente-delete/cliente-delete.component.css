@@ -1,60 +1,50 @@
-form{
-    display: flex;
-    flex-direction: column;
-}
-
-button{
-    margin: 20px 15px 0px 0px;
-}
-
-/* Card principal para o formulário de cliente */
+/* Estilos para o mat-card (cor de fundo principal) */
 .cliente-card {
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 400px; /* Limita a largura para centralizá-lo */
+    margin: 0 auto; /* Centraliza horizontalmente na página */
     padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: #2C3E50;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #64b5f6; /* COR DE FUNDO: Cinza claro. Troque por #ffffff (branco), #e3f2fd (azul claro), etc. */
+    border-radius: 8px; /* Opcional: Arredonda as bordas para um visual mais moderno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
 }
 
-/* Título com fundo azul claro */
+/* Se quiser estilizar o mat-card-title (título) com fundo diferente */
 ::ng-deep .cliente-card .mat-mdc-card-title {
-    background-color: #e3f2fd;
-    color: #1976d2;
+    background-color: #e3f2fd; /* Opcional: Fundo no título, ex.: cinza mais escuro */
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 15px;
-    width: 100%;
-    text-align: center;
 }
 
-/* Form centralizado */
+/* Estilos para o form (cor de fundo interna, se quiser diferenciar) */
 .centered-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-bottom: 15px;
-    background-color: #2C3E50;
+    margin-bottom: 20px;
+    background-color: #64b5f6; /* COR DE FUNDO: Cinza muito claro para o form. Remova se não quiser. */
     padding: 15px;
-    border-radius: 4px;
+    border-radius: 4px; /* Opcional: Arredonda o form */
 }
 
-/* Campos de input */
+/* Estilos para os campos de input (mantém o fundo padrão do Material, mas você pode alterar) */
 .full-width-field {
     width: 100%;
-    margin-bottom: 10px;
+    max-width: 300px;
+    margin-bottom: 15px;
 }
 
+/* Opcional: Mudar cor de fundo dos mat-form-field (inputs) */
 ::ng-deep .full-width-field .mat-mdc-form-field {
-    background-color: #2C3E50;
-    border-radius: 4px;
+    background-color: #64b5f6; /* Fundo branco nos campos de input */
 }
 
-/* Container de botões */
+/* Estilos para o container dos botões */
 .button-container {
     display: flex;
     justify-content: center;
@@ -63,47 +53,19 @@ button{
     margin-top: 10px;
 }
 
-/* Botões */
+/* Estilos para os botões */
 .excluir-btn {
-    background-color: #f44336;
-    color: white;
+    margin: 20px 15px 0px 0px; /* Seu margin original */
     padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    min-width: 100px;
 }
 
-.excluir-btn:hover {
-    background-color: #d32f2f;
-}
 
 .cancelar-btn {
-    background-color: #ff0000;
-    color: white;
+    margin: 20px 15px 0px 0px; /* Seu margin original */
     padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+}
+
+
+button {
     min-width: 100px;
 }
-
-.cancelar-btn:hover {
-    background-color: #cc0000;
-}
-
-/* Estados de carregamento e erro */
-.loading-container,
-.error-container {
-    text-align: center;
-    padding: 20px;
-    color: #fff;
-}
-
-/* Override para botões mat-raised-button */
-::ng-deep .cliente-card button.mat-mdc-raised-button {
-    background-color: transparent;
-}
-

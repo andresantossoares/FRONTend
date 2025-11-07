@@ -4,34 +4,38 @@
 }
 
 .sidenav{
-    background-color: #233241;
+    background-color: var(--sidenav-bg, #64b5f6);
     width: 200px;
     box-shadow: 2px 0 8px rgba(0,0,0,0.2);
 }
 
 .sidenav-header {
-    background-color: #1b2a41;
+    background-color: var(--sidenav-header-bg, #42a5f5);
     padding: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(30, 136, 229, 0.2);
 }
 
 .sidenav-header h2 {
-    color: white;
+    color: #ffffff;
     margin: 0;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
 .close-btn {
-    color: white;
+    color: #ffffff;
 }
 
 .sidenav i{
     padding-right: 10px;
-    color: #3498DB;
+    color: #ffffff;
+}
+
+.sidenav mat-icon {
+    color: #ffffff;
 }
 
 .nav-list {
@@ -39,24 +43,24 @@
 }
 
 .nav-list a {
-    color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
     transition: all 0.3s ease;
 }
 
 .nav-list a:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: #ffffff;
 }
 
 .nav-list a.router-link-active {
-    background-color: #274c77;
-    color: white;
-    border-left: 4px solid #3498DB;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-left: 4px solid #ffffff;
 }
 
 .content{
     padding: 0;
-    background-color: #1b2a41;
+    background-color: var(--body-bg, #4a4a4a);
     width: 100%;
     box-sizing: border-box;
     min-height: calc(100vh - 64px);

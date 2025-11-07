@@ -1,7 +1,6 @@
 <mat-card class="formaPagamento-card">
     <mat-card-title>Alterar Forma de Pagamento</mat-card-title>
-
-    <form class="centered-form" *ngIf="formaPagamento">
+    <form class="centered-form">
         <mat-form-field class="full-width-field">
             <input matInput placeholder="Descrição" [(ngModel)]="formaPagamento.descricao" name="descricao">
         </mat-form-field>
@@ -29,13 +28,14 @@
         <mat-form-field class="full-width-field">
             <input matInput placeholder="Ativo ?" [(ngModel)]="formaPagamento.ativo" name="ativo">
         </mat-form-field>
+    </form>
 
+    <div class="button-container">
         <button mat-raised-button (click)="updateFormaPagamento()" class="update-btn">
             Atualizar
         </button>
-        
         <button mat-raised-button (click)="cancel()" class="cancelar-btn">
             Cancelar
         </button>
-    </form>
+    </div>
 </mat-card>

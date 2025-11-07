@@ -1,0 +1,72 @@
+/* Estilos para o mat-card (cor de fundo principal) */
+.contato-card {
+    max-width: 400px; /* Limita a largura para centralizá-lo */
+    margin: 0 auto; /* Centraliza horizontalmente na página */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #64b5f6; /* COR DE FUNDO: Cinza claro. Troque por #ffffff (branco), #e3f2fd (azul claro), etc. */
+    border-radius: 8px; /* Opcional: Arredonda as bordas para um visual mais moderno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+/* Se quiser estilizar o mat-card-title (título) com fundo diferente */
+::ng-deep .contato-card .mat-mdc-card-title {
+    background-color: #e3f2fd; /* Opcional: Fundo no título, ex.: cinza mais escuro */
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para o form (cor de fundo interna, se quiser diferenciar) */
+.centered-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #64b5f6; /* COR DE FUNDO: Cinza muito claro para o form. Remova se não quiser. */
+    padding: 15px;
+    border-radius: 4px; /* Opcional: Arredonda o form */
+}
+
+/* Estilos para os campos de input (mantém o fundo padrão do Material, mas você pode alterar) */
+.full-width-field {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+}
+
+/* Opcional: Mudar cor de fundo dos mat-form-field (inputs) */
+::ng-deep .full-width-field .mat-mdc-form-field {
+    background-color: #64b5f6; /* Fundo branco nos campos de input */
+}
+
+/* Estilos para o container dos botões */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilos para os botões */
+.salvar-btn {
+    margin: 20px 15px 0px 0px; /* Seu margin original */
+    padding: 10px 20px;
+}
+
+
+.cancelar-btn {
+    margin: 20px 15px 0px 0px; /* Seu margin original */
+    padding: 10px 20px;
+}
+
+
+button {
+    min-width: 100px;
+}
+

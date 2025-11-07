@@ -1,44 +1,29 @@
-<mat-card>
-    <mat-card-header>
-      <mat-card-title>Criar Endereço</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <form #enderecoForm="ngForm">
-         <!-- Rua -->
-        <mat-form-field appearance="fill">
-          <mat-label>Rua</mat-label>
-          <input matInput placeholder="Rua" [(ngModel)]="endereco.endRua" name="endRua" required>
+<mat-card class="endereco-card">
+    <mat-card-title>Criar Endereço</mat-card-title>
+    <form class="centered-form" #enderecoForm="ngForm">
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Rua" [(ngModel)]="endereco.endRua" name="endRua" required>
         </mat-form-field>
-  
-        <!-- Número -->
-        <mat-form-field appearance="fill">
-          <mat-label>Número</mat-label>
-          <input matInput placeholder="Número" [(ngModel)]="endereco.endNumero" name="endNumero" type="number">
+        <mat-form-field class="full-width-field">
+            <input matInput type="number" placeholder="Número (opcional)" [(ngModel)]="endereco.endNumero" name="endNumero">
         </mat-form-field>
-  
-        <!-- Cidade -->
-        <mat-form-field appearance="fill">
-          <mat-label>Cidade</mat-label>
-          <input matInput placeholder="Cidade" [(ngModel)]="endereco.endCidade" name="endCidade" required>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Cidade" [(ngModel)]="endereco.endCidade" name="endCidade" required>
         </mat-form-field>
-  
-        <!-- Estado -->
-        <mat-form-field appearance="fill">
-          <mat-label>Estado</mat-label>
-          <input matInput placeholder="Estado (UF)" [(ngModel)]="endereco.endEstado" name="endEstado" maxlength="2">
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Estado (UF)" [(ngModel)]="endereco.endEstado" name="endEstado" maxlength="2">
         </mat-form-field>
-  
-        <!-- CEP -->
-        <mat-form-field appearance="fill">
-          <mat-label>CEP</mat-label>
-          <input matInput placeholder="CEP" [(ngModel)]="endereco.endCep" name="endCep" pattern="\d{5}-?\d{3}">
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="CEP" [(ngModel)]="endereco.endCep" name="endCep">
         </mat-form-field>
-  
-        
-      </form>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary" (click)="createEndereco()" [disabled]="!enderecoForm.valid">Criar</button>
-      <button mat-raised-button (click)="cancel()">Cancelar</button>
-    </mat-card-actions>
-  </mat-card>
+    </form>
+
+    <div class="button-container">
+        <button mat-raised-button (click)="createEndereco()" [disabled]="!enderecoForm.valid" class="salvar-btn">
+            Criar
+        </button>
+        <button mat-raised-button (click)="cancel()" class="cancelar-btn">
+            Cancelar
+        </button>
+    </div>
+</mat-card>

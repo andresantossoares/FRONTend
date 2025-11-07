@@ -6,14 +6,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #2C3E50; /* Fundo marrom escuro */
+    background-color: var(--card-bg, #64b5f6); /* Fundo marrom escuro */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 ::ng-deep .Fornecedor-card .mat-mdc-card-title {
-    background-color: #2C3E50; /* Fundo cinza claro */
-    color: #333; /* Texto escuro */
+    background-color: #e3f2fd; /* Fundo azul muito claro */
+    color: #ffffff; /* Texto azul */
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 15px;
@@ -27,7 +27,7 @@
     align-items: center;
     width: 100%;
     margin-bottom: 20px;
-    background-color: #2C3E50; /* Fundo branco */
+    background-color: var(--card-bg, #64b5f6); /* Fundo branco */
     padding: 15px;
     border-radius: 4px;
 }
@@ -39,7 +39,7 @@
 }
 
 ::ng-deep .full-width-field .mat-mdc-text-field-wrapper {
-    background-color: #2C3E50; /* Cinza muito claro */
+    background-color: var(--card-bg, #64b5f6); /* Cinza muito claro */
     border-radius: 4px;
 }
 

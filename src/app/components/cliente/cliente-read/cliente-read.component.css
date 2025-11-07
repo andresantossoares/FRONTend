@@ -1,27 +1,28 @@
 :host {
     display: block;
-    background-color: #274c77;
+    background-color: var(--body-bg, #4a4a4a);
     min-height: 100vh;
     padding: 20px;
 }
 
 .table-container {
     padding: 20px;
-    background-color: #1b2a41;
+    background-color: var(--card-bg, #64b5f6);
+    color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .mat-elevation-z4 {
-    background-color: #1b2a41;
+    background-color: var(--card-bg, #64b5f6);
     border-radius: 8px;
     overflow: hidden;
 }
 
 .botao-novo {
     margin-bottom: 16px;
-    background-color: #274c77;
-    color: white;
+    background-color: var(--button-bg, #42a5f5);
+    color: #ffffff;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -31,7 +32,7 @@
 }
 
 .botao-novo:hover {
-    background-color: #3498DB;
+    background-color: var(--button-bg, #42a5f5);
 }
 
 .botao-novo mat-icon {
@@ -79,31 +80,36 @@ table {
 }
 
 th {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    background-color: #e3f2fd;
+    color: #000000;
     font-weight: 600;
     padding: 16px;
 }
 
+th mat-icon,
+th .mat-sort-header-arrow {
+    color: #000000;
+}
+
 td {
     padding: 16px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(30, 136, 229, 0.2);
+    color: #ffffff;
 }
 
 tr:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #e3f2fd;
 }
 
 .edit {
-    color: #6096ba;
+    color: #ffffff;
     margin-right: 12px;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .edit:hover {
-    color: #3498DB;
+    color: #ffffff;
     transform: scale(1.1);
 }
 

@@ -23,6 +23,12 @@ export class FormaPagamentoReadComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.formaPagamentoService.read().subscribe(formaPagamento => {
+      console.log('Formas de pagamento recebidas:', formaPagamento);
+      if (formaPagamento && formaPagamento.length > 0) {
+        console.log('Primeiro item:', formaPagamento[0]);
+        console.log('fId do primeiro item:', formaPagamento[0].fId);
+        console.log('FId do primeiro item:', (formaPagamento[0] as any).FId);
+      }
       this.dataSource.data = formaPagamento;
     });
   }
@@ -45,6 +51,11 @@ export class FormaPagamentoReadComponent implements OnInit, AfterViewInit {
   limparFiltro(): void {
     this.filterValue = '';
     this.aplicarFiltro();
+  }
+
+  getId(row: any): number | null {
+    // O backend retorna 'id', então verificamos primeiro
+    return row.id || row.fId || row.FId || row.Id || null;
   }
 
 }

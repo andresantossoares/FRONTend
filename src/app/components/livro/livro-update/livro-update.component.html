@@ -1,40 +1,37 @@
 <mat-card class="livro-card">
     <mat-card-title>Alterar Livro</mat-card-title>
-  
     <form class="centered-form">
-      <mat-form-field class="full-width-field">
-        <input matInput placeholder="Nome do livro" [(ngModel)]="livro.liNome" name="liNome">
-      </mat-form-field>
-  
-      <mat-form-field class="full-width-field">
-        <input matInput placeholder="Descrição do livro" [(ngModel)]="livro.liDescricao" name="liDescricao">
-      </mat-form-field>
-  
-      <mat-form-field class="full-width-field">
-        <input matInput placeholder="Avaliação" [(ngModel)]="livro.liAvaliacao" name="liAvaliacao">
-      </mat-form-field>
-  
-      <mat-form-field class="full-width-field">
-        <input matInput placeholder="Número de páginas" [(ngModel)]="livro.liNumeroPagi" name="liNumeroPagi">
-      </mat-form-field>
-      <mat-form-field class="full-width-field">
-        <input matInput placeholder="Nome fantasia do fornecedor" [(ngModel)]="livro.forNomeFantasia" name="forNomeFantasia">
-      </mat-form-field>
-      <mat-form-field class="full-width-field">
-        <input matInput placeholder="Cnpj do fornecedor" [(ngModel)]="livro.forCnpj" name="forCnpj">
-      </mat-form-field>
-      <mat-form-field class="full-width-field">
-        <input matInput placeholder="razão social do fornecedor" [(ngModel)]="livro.forRazaoSocial" name="forRazaoSocial">
-      </mat-form-field>
-
-    <button mat-raised-button (click)="updateLivro()" class="update-btn">
-        Atualizar
-    </button>
-    
-    <button mat-raised-button (click)="cancel()" class="cancelar-btn">
-        Cancelar
-    </button>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Nome do livro" [(ngModel)]="livro.liNome" name="liNome">
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Descrição do livro" [(ngModel)]="livro.liDescricao" name="liDescricao">
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Avaliação" [(ngModel)]="livro.liAvaliacao" name="liAvaliacao">
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Número de páginas" [(ngModel)]="livro.liNumeroPagi" name="liNumeroPagi">
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Nome fantasia do fornecedor" [(ngModel)]="livro.forNomeFantasia" name="forNomeFantasia">
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="Cnpj do fornecedor" [(ngModel)]="livro.forCnpj" name="forCnpj">
+        </mat-form-field>
+        <mat-form-field class="full-width-field">
+            <input matInput placeholder="razão social do fornecedor" [(ngModel)]="livro.forRazaoSocial" name="forRazaoSocial">
+        </mat-form-field>
     </form>
+
+    <div class="button-container">
+        <button mat-raised-button (click)="updateLivro()" class="salvar-btn">
+            Atualizar
+        </button>
+        <button mat-raised-button (click)="cancel()" class="cancelar-btn">
+            Cancelar
+        </button>
+    </div>
 </mat-card>
 
 

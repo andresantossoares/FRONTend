@@ -17,14 +17,25 @@
     <mat-form-field class="full-width-field">
       <input matInput placeholder="Número de páginas" [(ngModel)]="livro.liNumeroPagi" name="liNumeroPagi">
     </mat-form-field>
+    
     <mat-form-field class="full-width-field">
-      <input matInput placeholder="Nome fantasia do fornecedor" [(ngModel)]="livro.forNomeFantasia" name="forNomeFantasia">
+      <mat-label>Selecione o Fornecedor</mat-label>
+      <mat-select [(ngModel)]="fornecedorSelecionado" (selectionChange)="onFornecedorChange($event.value)" name="fornecedor">
+        <mat-option [value]="null">Nenhum fornecedor selecionado</mat-option>
+        <mat-option *ngFor="let fornecedor of fornecedores" [value]="fornecedor">
+          {{ fornecedor.forNomeFantasia }} - {{ fornecedor.forRazaoSocial }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field class="full-width-field">
+      <input matInput placeholder="Nome fantasia do fornecedor" [(ngModel)]="livro.forNomeFantasia" name="forNomeFantasia" readonly>
     </mat-form-field>
     <mat-form-field class="full-width-field">
-      <input matInput placeholder="Cnpj do fornecedor" [(ngModel)]="livro.forCnpj" name="forCnpj">
+      <input matInput placeholder="CNPJ do fornecedor" [(ngModel)]="livro.forCnpj" name="forCnpj" readonly>
     </mat-form-field>
     <mat-form-field class="full-width-field">
-      <input matInput placeholder="razão social do fornecedor" [(ngModel)]="livro.forRazaoSocial" name="forRazaoSocial">
+      <input matInput placeholder="Razão social do fornecedor" [(ngModel)]="livro.forRazaoSocial" name="forRazaoSocial" readonly>
     </mat-form-field>
 
     <div class="button-container">

@@ -1,8 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+  height: 100%; 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
 
+/* Fundo global - muda com o tema */
+body {
+  background-color: var(--body-bg, #4a4a4a);
+  color: var(--body-text-color, #ffffff);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Variáveis de cores - Paleta azul */
+:root {
+  --fundo-escuro: #4a4a4a;
+  --azul-muito-claro: #e3f2fd;
+  --azul-claro: #bbdefb;
+  --azul-medio-claro: #64b5f6;
+  --azul-medio: #42a5f5;
+  --azul-destaque: #1e88e5;
+  --azul-hover: #1565c0;
+}
 
 /*essa é classe css global, e podemos definir configurações para aplicar em outros arquivos*/
 .red{
@@ -13,5 +33,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     vertical-align: middle;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Estilos para cabeçalhos de tabela - texto preto */
+::ng-deep th .mat-sort-header-arrow {
+  color: #000000 !important;
+}
+
+::ng-deep th .mat-sort-header-stem {
+  background: #000000 !important;
+}
+
+::ng-deep th .mat-sort-header-indicator {
+  color: #000000 !important;
+}
